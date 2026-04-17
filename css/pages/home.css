@@ -10,6 +10,10 @@
 
 .section-1 {
   background-color: var(--color-black);
+  background-image: url('/assets/images/fish-with-vegetables-cutlery-black-background.jpg');
+  background-position: right center;
+  background-size: 60% auto;
+  background-repeat: no-repeat;
 }
 
 .section-1::after {
@@ -26,6 +30,10 @@
 
 .section-2 {
   background-color: var(--color-dark);
+  background-image: url('/assets/images/food-with-ingredients.jpg');
+  background-position: left center;
+  background-size: 55% auto;
+  background-repeat: no-repeat;
 }
 
 .section-2::after {
