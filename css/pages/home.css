@@ -10,20 +10,28 @@
 
 .section-1 {
   background-color: var(--color-black);
+}
+
+.section-1 .background-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 55%;
+  height: 100%;
   background-image: url('/assets/images/Bazaart_C8F19A78-2E11-451B-883F-E7F2C2D7AED3.JPEG');
-  background-position: right 50%;
-  background-size: 62% auto;
+  background-position: left center;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
-.section-1::after {
+.section-1 .background-image::after {
   content: '';
   position: absolute;
   right: 0;
   top: 0;
   height: 100%;
-  width: 65%;
-  background: linear-gradient(270deg, rgba(10,10,10,1) 0%, rgba(10,10,10,0) 65%);
+  width: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(10,10,10,0.6) 60%, rgba(10,10,10,1) 85%);
   pointer-events: none;
 }
 
