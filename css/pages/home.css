@@ -10,9 +10,9 @@
 
 .section-1 {
   background-color: var(--color-black);
-  background-image: url('/assets/images/fish-with-vegetables-cutlery-black-background.jpg');
+  background-image: url('/assets/images/C7EE998B-4AE1-45F7-9A1E-15D0837FED7C_1_201_a.jpeg');
   background-position: right center;
-  background-size: 60% auto;
+  background-size: 65% auto;
   background-repeat: no-repeat;
 }
 
@@ -42,9 +42,9 @@
 
 .section-2 {
   background-color: var(--color-dark);
-  background-image: url('/assets/images/food-with-ingredients.jpg');
+  background-image: url('/assets/images/39FF9C41-91AE-4275-98CC-040D1D5B8EF2_1_201_a.jpeg');
   background-position: left center;
-  background-size: 55% auto;
+  background-size: 60% auto;
   background-repeat: no-repeat;
 }
 
