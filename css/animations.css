@@ -20,9 +20,10 @@
 .intro-line {
   position: absolute;
   width: 220px;
-  height: 2px;
-  background-color: var(--color-white);
+  height: 1px;
+  background-color: rgba(250, 250, 250, 0.75);
   transform-origin: center;
+  will-change: transform;
 }
 
 .intro-logo-container {
