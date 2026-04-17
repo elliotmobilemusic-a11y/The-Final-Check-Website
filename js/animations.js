@@ -1,6 +1,6 @@
 /**
  * Opening Animation Sequence
- * Apple style cinematic brand reveal
+ * Premium Hospitality Brand Reveal
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,59 +40,54 @@ function runIntroAnimation() {
   
   tl.to('#intro-overlay', {
     opacity: 1,
-    duration: 0.6,
+    duration: 0.8,
     ease: 'power2.out'
   });
   
-  tl.from('.intro-line', {
+  tl.from('.intro-divider', {
     scaleX: 0,
-    duration: 0.8,
-    ease: 'power2.out',
-    delay: 0.3
-  });
-  
-  tl.to('.intro-line', {
-    scaleY: 140,
-    duration: 0.9,
+    opacity: 0,
+    duration: 1.3,
     ease: 'expo.out',
-    delay: 0.2
+    delay: 0.4
   });
   
   tl.from('.intro-logo', {
     opacity: 0,
     y: 12,
-    duration: 1.1,
+    letterSpacing: '0.5em',
+    duration: 1.6,
     ease: 'expo.out'
-  }, '-=0.3');
+  }, '-=0.6');
   
   tl.to('.intro-tagline', {
-    opacity: 0.7,
-    duration: 0.8,
+    opacity: 0.65,
+    y: 0,
+    duration: 1.1,
     ease: 'power2.out'
-  }, '-=0.4');
+  }, '-=0.7');
   
-  tl.to('.intro-logo-container', {
-    scale: 0.75,
-    y: -60,
-    duration: 1,
+  tl.to('.intro-container', {
+    y: -50,
+    duration: 1.4,
     ease: 'expo.out',
-    delay: 0.6
-  });
+    delay: 0.7
+  }, '-=0.2');
   
   tl.to('#intro-overlay', {
     opacity: 0,
-    duration: 0.8,
+    duration: 1.2,
     ease: 'power2.inOut',
     onComplete: () => {
       document.getElementById('intro-overlay').style.display = 'none';
     }
-  }, '-=0.2');
+  }, '-=0.4');
 }
 
 function skipIntroAnimation() {
   gsap.killTweensOf('*');
   gsap.set('#intro-overlay', { opacity: 0, display: 'none' });
-  gsap.set('.intro-line, .intro-logo, .intro-logo-container', { clearProps: 'all' });
+  gsap.set('.intro-divider, .intro-logo, .intro-tagline, .intro-container', { clearProps: 'all' });
   enableSite();
 }
 

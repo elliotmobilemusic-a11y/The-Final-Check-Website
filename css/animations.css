@@ -1,5 +1,6 @@
 /**
  * Opening Animation Styles
+ * Premium Hospitality Brand Reveal
  */
 
 #intro-overlay {
@@ -17,38 +18,38 @@
   pointer-events: none;
 }
 
-.intro-line {
-  position: absolute;
-  width: 220px;
-  height: 1px;
-  background-color: rgba(250, 250, 250, 0.75);
+.intro-container {
+  text-align: center;
   transform-origin: center;
-  will-change: transform;
 }
 
-.intro-logo-container {
-  position: relative;
-  z-index: 1;
+.intro-divider {
+  width: 160px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(250, 250, 250, 0.6), transparent);
+  margin: 0 auto 2rem auto;
   transform-origin: center;
 }
 
 .intro-logo {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 300;
   letter-spacing: 0.32em;
   margin: 0;
   color: var(--color-white);
   text-transform: uppercase;
   font-feature-settings: "cpsp" 1;
+  line-height: 1.4;
 }
 
 .intro-tagline {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.25em;
+  margin-top: 1.75rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--color-primary);
   opacity: 0;
+  transform: translateY(8px);
 }
 
 #main-content {
