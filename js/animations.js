@@ -11,11 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
   
-  // Skip animation for repeat visits in same session
-  if (sessionStorage.getItem('introPlayed')) {
-    skipIntroAnimation();
-    return;
-  }
   
   // Run opening animation
   runIntroAnimation();
@@ -33,7 +28,6 @@ function runIntroAnimation() {
   
   const tl = gsap.timeline({
     onComplete: () => {
-      sessionStorage.setItem('introPlayed', 'true');
       enableSite();
     }
   });
@@ -76,12 +70,12 @@ function runIntroAnimation() {
   
   tl.to('#intro-overlay', {
     opacity: 0,
-    duration: 1.2,
-    ease: 'power2.inOut',
+    duration: 1.6,
+    ease: 'power3.inOut',
     onComplete: () => {
       document.getElementById('intro-overlay').style.display = 'none';
     }
-  }, '-=0.4');
+  }, '-=0.3');
 }
 
 function skipIntroAnimation() {
