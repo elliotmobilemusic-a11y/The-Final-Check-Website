@@ -32,11 +32,22 @@
 }
 
 .intro-logo {
-  font-size: 1.75rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.32em;
   margin: 0;
   color: var(--color-white);
+  text-transform: uppercase;
+  font-feature-settings: "cpsp" 1;
+}
+
+.intro-tagline {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  opacity: 0;
 }
 
 #main-content {

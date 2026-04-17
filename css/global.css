@@ -19,10 +19,12 @@
   --color-light: #A3A3A3;
   --color-white: #FAFAFA;
   
-  /* Accent Colors */
-  --color-primary: #9F8A61;
-  --color-primary-light: #B8A57A;
-  --color-accent: #C9B999;
+  /* Accent Colors - Premium Hospitality Palette */
+  --color-primary: #A88F5E;
+  --color-primary-light: #BFAA7A;
+  --color-primary-dark: #8A7449;
+  --color-warm-dark: #1A1712;
+  --color-warm-medium: #242019;
   
   /* Spacing System */
   --space-xs: 0.5rem;

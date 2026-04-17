@@ -60,8 +60,14 @@ function runIntroAnimation() {
   
   tl.from('.intro-logo', {
     opacity: 0,
-    y: 20,
-    duration: 0.7,
+    y: 12,
+    duration: 1.1,
+    ease: 'expo.out'
+  }, '-=0.3');
+  
+  tl.to('.intro-tagline', {
+    opacity: 0.7,
+    duration: 0.8,
     ease: 'power2.out'
   }, '-=0.4');
   
