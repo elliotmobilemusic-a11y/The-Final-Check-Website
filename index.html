@@ -3,87 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Final Check</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background-color: #0a0a0a;
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .container {
-            text-align: center;
-            max-width: 600px;
-            padding: 2rem;
-        }
-        
-        h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .status {
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .status p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-        
-        .badge {
-            display: inline-block;
-            background: #10b981;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-top: 1rem;
-        }
-        
-        footer {
-            margin-top: 3rem;
-            opacity: 0.6;
-            font-size: 0.875rem;
-        }
-    </style>
+    <title>The Final Check | Hospitality Consultancy</title>
+    
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/pages/home.css">
+    
+    <meta name="description" content="Premium hospitality consultancy. Operational audits, profit improvement, menu development and compliance for restaurants, hotels and hospitality groups.">
 </head>
 <body>
-    <div class="container">
-        <h1>The Final Check</h1>
-        
-        <div class="status">
-            <p>✅ Project initialized successfully</p>
-            <p>✅ Git repository configured</p>
-            <p>✅ Vercel deployment ready</p>
-            <div class="badge">Ready for development</div>
+    
+    <!-- Opening Animation Sequence -->
+    <div id="intro-overlay">
+        <div class="intro-line"></div>
+        <div class="intro-logo-container">
+            <h1 class="intro-logo">THE FINAL CHECK</h1>
         </div>
-        
-        <p>Your website project is now set up and ready to be connected to GitHub and deployed to Vercel.</p>
-        
-        <footer>
-            The Final Check Website Project
-        </footer>
     </div>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        
+        <!-- Navigation (Appears after intro) -->
+        <header id="site-header">
+            <div class="container">
+                <nav class="navbar">
+                    <div class="nav-brand">THE FINAL CHECK</div>
+                    <ul class="nav-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/services.html">Services</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- Narrative Scroll Sections -->
+        <section class="narrative-section section-1">
+            <div class="container container-narrow text-center">
+                <h2>Operational Excellence For Hospitality</h2>
+                <p class="lead">The Final Check helps food-led businesses improve standards, increase profitability, reduce risk and deliver consistent exceptional experiences.</p>
+            </div>
+        </section>
+        
+        <section class="narrative-section section-2">
+            <div class="container container-narrow text-center">
+                <h2>For operators who demand better</h2>
+                <p>Restaurants • Gastro Pubs • Hotels • Farm Shops • Bakeries • Food To Go • Multi Site Groups</p>
+            </div>
+        </section>
+        
+        <section class="narrative-section section-3">
+            <div class="container container-narrow">
+                <div class="about-intro">
+                    <div class="about-portrait">
+                        <div class="portrait-placeholder"></div>
+                    </div>
+                    <div class="about-content">
+                        <h2>Jason Wardill</h2>
+                        <p class="lead">Hospitality Operations Consultant</p>
+                        <p>Over 25 years senior experience across Michelin starred kitchens, luxury hotels, gastro pubs and multi-site hospitality groups. I have held roles including Head Chef, Executive Chef, Group Executive Chef, Head of Food & Beverage, Operations Manager and Group Development Chef.</p>
+                        <p>I don't just advise on theory. I have run the operations, led the teams, opened the sites, and delivered the results.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Transition to Standard Website -->
+        <section class="standard-section">
+            <div class="container">
+                <h2 class="section-title">Services</h2>
+                <div class="services-grid">
+                    
+                    <div class="service-card">
+                        <h3>Operational Audits</h3>
+                        <p>Complete independent operational assessment of your business including standards, systems, compliance and profitability.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Menu Development</h3>
+                        <p>Expert menu engineering, recipe development, costings and specification to maximise margin and quality.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Profit Improvement</h3>
+                        <p>Practical measurable actions to improve food margins, reduce waste and increase operational efficiency.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Food Safety & Compliance</h3>
+                        <p>Audit, support and training to ensure your business operates safely and meets all legal requirements.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Training & Mentoring</h3>
+                        <p>One to one and group training for chefs, managers and operational teams at all levels.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>New Openings</h3>
+                        <p>Complete support for new site openings from concept development through to successful launch.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <footer id="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">THE FINAL CHECK</div>
+                    <p>Premium Hospitality Consultancy</p>
+                    <p>&copy; 2026 The Final Check. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="/js/animations.js"></script>
+    <script src="/js/scroll.js"></script>
+    <script src="/js/navigation.js"></script>
+
 </body>
 </html>
