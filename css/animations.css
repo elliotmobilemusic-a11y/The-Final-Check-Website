@@ -54,6 +54,12 @@
 
 #main-content {
   opacity: 0;
+  transform: translateY(30px);
+}
+
+#site-header.active {
+  transform: translateY(-10px);
+  opacity: 0;
 }
 
 /**

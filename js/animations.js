@@ -87,8 +87,22 @@ function skipIntroAnimation() {
 
 function enableSite() {
   gsap.set('body', { overflow: 'auto' });
-  document.getElementById('main-content').style.opacity = '1';
-  document.getElementById('site-header').classList.add('active');
+  
+  gsap.to('#main-content', {
+    opacity: 1,
+    y: 0,
+    duration: 1.4,
+    ease: 'expo.out',
+    delay: 0.15
+  });
+  
+  gsap.to('#site-header', {
+    y: 0,
+    opacity: 1,
+    duration: 1.1,
+    ease: 'expo.out',
+    delay: 0.3
+  });
   
   // Initialise scroll animations
   if (typeof initScrollAnimations === 'function') {
