@@ -54,9 +54,9 @@ function runIntroAnimation() {
   
   tl.from('.intro-logo', {
     opacity: 0,
-    y: 12,
-    letterSpacing: '0.5em',
-    duration: 1.6,
+    y: 16,
+    letterSpacing: '0.55em',
+    duration: 1.9,
     ease: 'expo.out'
   }, '-=0.6');
   
