@@ -1,0 +1,96 @@
+/**
+ * Homepage Section Styles
+ * Premium Hospitality Consultancy
+ */
+
+.narrative-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-1 {
+  background-color: var(--color-black);
+}
+
+.section-1::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 45%;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.35));
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.section-2 {
+  background-color: var(--color-dark);
+}
+
+.section-2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(270deg, transparent, rgba(18,18,18,0.45));
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* Service Cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.service-card {
+  background-color: var(--color-dark);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: transform 0.3s var(--ease-out-expo), background-color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  background-color: var(--color-medium);
+}
+
+.service-card h3 {
+  margin-bottom: var(--space-sm);
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Footer */
+#site-footer {
+  padding: var(--space-2xl) 0;
+  background-color: var(--color-black);
+  border-top: 1px solid var(--color-medium);
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-brand {
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+#site-footer p {
+  margin-bottom: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
