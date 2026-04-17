@@ -53,7 +53,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  background-color: var(--color-black);
+  background-color: #0A0A0A;
 }
 
 body {
