@@ -22,9 +22,8 @@
   right: 0;
   top: 0;
   height: 100%;
-  width: 100%;
-  background: linear-gradient(90deg, rgba(10,10,10,1) 35%, rgba(10,10,10,0.7) 50%, transparent 65%, transparent 100%),
-              linear-gradient(180deg, rgba(10,10,10,1) 0%, transparent 20%, transparent 80%, rgba(10,10,10,0.9) 100%);
+  width: 70%;
+  background: linear-gradient(270deg, rgba(10,10,10,1) 0%, rgba(10,10,10,0.6) 35%, transparent 60%);
   pointer-events: none;
 }
 
