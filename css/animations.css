@@ -32,7 +32,7 @@
 }
 
 .intro-logo {
-  font-size: 2.35rem;
+  font-size: 2.55rem;
   font-weight: 300;
   letter-spacing: 0.38em;
   margin: 0;
@@ -44,7 +44,7 @@
 
 .intro-tagline {
   margin-top: 1.75rem;
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--color-primary);
