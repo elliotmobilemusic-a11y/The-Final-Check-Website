@@ -210,7 +210,7 @@ body::before {
 }
 
 .section-2 {
-  padding: var(--space-xl) 0;
+  padding: var(--space-lg) 0 var(--space-xl) 0;
 }
 
 .section-2 .credibility-intro {
@@ -236,7 +236,7 @@ body::before {
 }
 
 .section-3 {
-  padding: var(--space-2xl) 0 var(--space-lg) 0;
+  padding: var(--space-xl) 0 var(--space-md) 0;
 }
 
 .section-title {
@@ -298,10 +298,10 @@ body::before {
 
 .about-intro {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 280px 1fr;
   gap: var(--space-xl);
   align-items: center;
-  max-width: 900px;
+  max-width: 860px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -343,7 +343,7 @@ body::before {
   background: transparent;
   position: relative;
   z-index: 3;
-  padding: var(--space-2xl) 0 var(--space-xl) 0;
+  padding: var(--space-xl) 0 var(--space-xl) 0;
 }
 
 /* ========================================

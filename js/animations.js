@@ -124,134 +124,171 @@ function initScrollAnimations() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.refresh();
 
-  // Force visible state first to prevent disappearing content
-  gsap.set([
-    '.section-1 .hero-eyebrow', '.section-1 h2', '.section-1 .lead',
-    '.section-3 .section-title', '.value-card',
-    '.section-2 .lead-large', '.section-2 p',
-    '.about-portrait', '.about-content > *',
-    '.standard-section .section-title', '.service-card',
-    '.footer-content > *'
-  ], { autoAlpha: 1, y: 0 });
+  // ------------------------------
+  // HERO SECTION
+  // ------------------------------
+  const heroTargets = [
+    document.querySelector('.section-1 .hero-eyebrow'),
+    document.querySelector('.section-1 h2'),
+    document.querySelector('.section-1 .lead')
+  ].filter(Boolean);
 
-  // Hero Section
-  gsap.fromTo('.section-1 .hero-eyebrow, .section-1 h2, .section-1 .lead',
-    { autoAlpha: 0, y: 16 },
-    {
-      autoAlpha: 1,
-      y: 0,
-      duration: 0.85,
-      stagger: 0.06,
-      ease: 'power2.out',
-      immediateRender: false,
-      overwrite: 'none',
-      scrollTrigger: {
-        trigger: '.section-1',
-        start: 'top 85%',
-        once: true,
-        toggleActions: 'play none none none'
+  if (heroTargets.length) {
+    gsap.fromTo(heroTargets,
+      { autoAlpha: 0, y: 14 },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.85,
+        stagger: 0.05,
+        ease: 'power2.out',
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: document.querySelector('.section-1'),
+          start: 'top 86%',
+          once: true,
+          toggleActions: 'play none none none'
+        }
       }
-    }
-  );
+    );
+  }
 
-  // Why Jason Section
-  gsap.fromTo('.section-3 .section-title, .value-card',
-    { autoAlpha: 0, y: 16 },
-    {
-      autoAlpha: 1,
-      y: 0,
-      duration: 0.85,
-      stagger: 0.06,
-      ease: 'power2.out',
-      immediateRender: false,
-      overwrite: 'none',
-      scrollTrigger: {
-        trigger: '.section-3',
-        start: 'top 85%',
-        once: true,
-        toggleActions: 'play none none none'
-      }
-    }
-  );
+  // ------------------------------
+  // WHY JASON SECTION
+  // ------------------------------
+  const whyJasonTargets = [
+    document.querySelector('.section-3:first-of-type .section-title'),
+    ...document.querySelectorAll('.value-card')
+  ].filter(Boolean);
 
-  // Jason Credibility Summary
-  gsap.fromTo('.section-2 .lead-large, .section-2 p',
-    { autoAlpha: 0, y: 14 },
-    {
-      autoAlpha: 1,
-      y: 0,
-      duration: 0.8,
-      stagger: 0.05,
-      ease: 'power2.out',
-      immediateRender: false,
-      overwrite: 'none',
-      scrollTrigger: {
-        trigger: '.section-2',
-        start: 'top 85%',
-        once: true,
-        toggleActions: 'play none none none'
+  if (whyJasonTargets.length) {
+    gsap.fromTo(whyJasonTargets,
+      { autoAlpha: 0, y: 14 },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.85,
+        stagger: 0.06,
+        ease: 'power2.out',
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: document.querySelector('.section-3:first-of-type'),
+          start: 'top 86%',
+          once: true,
+          toggleActions: 'play none none none'
+        }
       }
-    }
-  );
+    );
+  }
 
-  // Jason Profile Section
-  gsap.fromTo('.about-portrait, .about-content > *',
-    { autoAlpha: 0, y: 16 },
-    {
-      autoAlpha: 1,
-      y: 0,
-      duration: 0.85,
-      stagger: 0.06,
-      ease: 'power2.out',
-      immediateRender: false,
-      overwrite: 'none',
-      scrollTrigger: {
-        trigger: '.about-intro',
-        start: 'top 85%',
-        once: true,
-        toggleActions: 'play none none none'
-      }
-    }
-  );
+  // ------------------------------
+  // JASON SUMMARY SECTION
+  // ------------------------------
+  const summaryTargets = [
+    document.querySelector('.section-2 .lead-large'),
+    ...document.querySelectorAll('.section-2 p')
+  ].filter(Boolean);
 
-  // Services Section
-  gsap.fromTo('.standard-section .section-title, .service-card',
-    { autoAlpha: 0, y: 14 },
-    {
-      autoAlpha: 1,
-      y: 0,
-      duration: 0.8,
-      stagger: 0.05,
-      ease: 'power2.out',
-      immediateRender: false,
-      overwrite: 'none',
-      scrollTrigger: {
-        trigger: '.standard-section',
-        start: 'top 85%',
-        once: true,
-        toggleActions: 'play none none none'
+  if (summaryTargets.length) {
+    gsap.fromTo(summaryTargets,
+      { autoAlpha: 0, y: 12 },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.04,
+        ease: 'power2.out',
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: document.querySelector('.section-2'),
+          start: 'top 86%',
+          once: true,
+          toggleActions: 'play none none none'
+        }
       }
-    }
-  );
+    );
+  }
 
-  // Footer
-  gsap.fromTo('.footer-content > *',
-    { autoAlpha: 0, y: 12 },
-    {
-      autoAlpha: 1,
-      y: 0,
-      duration: 0.75,
-      stagger: 0.05,
-      ease: 'power2.out',
-      immediateRender: false,
-      overwrite: 'none',
-      scrollTrigger: {
-        trigger: '#site-footer',
-        start: 'top 90%',
-        once: true,
-        toggleActions: 'play none none none'
+  // ------------------------------
+  // JASON PROFILE SECTION
+  // ------------------------------
+  const profileTargets = [
+    document.querySelector('.about-portrait'),
+    ...document.querySelectorAll('.about-content > *')
+  ].filter(Boolean);
+
+  if (profileTargets.length) {
+    gsap.fromTo(profileTargets,
+      { autoAlpha: 0, y: 14 },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.85,
+        stagger: 0.05,
+        ease: 'power2.out',
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: document.querySelector('.about-intro'),
+          start: 'top 86%',
+          once: true,
+          toggleActions: 'play none none none'
+        }
       }
-    }
-  );
+    );
+  }
+
+  // ------------------------------
+  // SERVICES SECTION
+  // ------------------------------
+  const servicesTargets = [
+    document.querySelector('.standard-section .section-title'),
+    ...document.querySelectorAll('.service-card')
+  ].filter(Boolean);
+
+  if (servicesTargets.length) {
+    gsap.fromTo(servicesTargets,
+      { autoAlpha: 0, y: 12 },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.05,
+        ease: 'power2.out',
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: document.querySelector('.standard-section'),
+          start: 'top 86%',
+          once: true,
+          toggleActions: 'play none none none'
+        }
+      }
+    );
+  }
+
+  // ------------------------------
+  // FOOTER
+  // ------------------------------
+  const footerTargets = [...document.querySelectorAll('.footer-content > *')].filter(Boolean);
+
+  if (footerTargets.length) {
+    gsap.fromTo(footerTargets,
+      { autoAlpha: 0, y: 10 },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.75,
+        stagger: 0.04,
+        ease: 'power2.out',
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: document.querySelector('#site-footer'),
+          start: 'top 90%',
+          once: true,
+          toggleActions: 'play none none none'
+        }
+      }
+    );
+  }
 }
