@@ -157,15 +157,15 @@ body::before {
    ======================================== */
 
 /* Hero Section */
-.section-1 {
+.hero-section {
   position: relative;
-  min-height: 68vh;
+  min-height: 78vh;
   display: flex;
   align-items: center;
   background: transparent;
   overflow: visible;
-  padding-top: 4vh;
-  padding-bottom: 4vh;
+  padding-top: 12vh;
+  padding-bottom: 8vh;
   z-index: 2;
 }
 
@@ -235,16 +235,8 @@ body::before {
   opacity: 0.85;
 }
 
-.why-jason-section {
-  padding: var(--space-xl) 0 var(--space-md) 0;
-}
-
-.jason-summary-section {
-  padding: var(--space-lg) 0 var(--space-xl) 0;
-}
-
-.jason-profile-section {
-  padding: var(--space-xl) 0 var(--space-lg) 0;
+.services-section {
+  padding: var(--space-2xl) 0 var(--space-xl) 0;
 }
 
 .section-title {
