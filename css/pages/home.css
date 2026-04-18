@@ -35,8 +35,8 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background: radial-gradient(ellipse 65% 75% at 12% 50%, transparent 0%, rgba(10,10,10,0) 50%, rgba(10,10,10,0.02) 70%, rgba(10,10,10,0.2) 85%, rgba(10,10,10,0.7) 96%, rgba(10,10,10,1) 100%),
-              linear-gradient(180deg, rgba(10,10,10,1) 0%, transparent 15%, transparent 85%, rgba(10,10,10,1) 100%);
+  background: radial-gradient(ellipse 60% 60% at 15% 50%, transparent 0%, rgba(10,10,10,0) 45%, rgba(10,10,10,0.03) 65%, rgba(10,10,10,0.25) 80%, rgba(10,10,10,0.75) 94%, rgba(10,10,10,1) 100%),
+              linear-gradient(180deg, rgba(10,10,10,1) 0%, transparent 22%, transparent 78%, rgba(10,10,10,1) 100%);
   pointer-events: none;
 }
 
@@ -68,8 +68,8 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background: radial-gradient(ellipse 65% 75% at 88% 50%, transparent 0%, rgba(10,10,10,0) 50%, rgba(10,10,10,0.02) 70%, rgba(10,10,10,0.2) 85%, rgba(10,10,10,0.7) 96%, rgba(10,10,10,1) 100%),
-              linear-gradient(180deg, rgba(10,10,10,1) 0%, transparent 15%, transparent 85%, rgba(10,10,10,1) 100%);
+  background: radial-gradient(ellipse 60% 60% at 85% 50%, transparent 0%, rgba(10,10,10,0) 45%, rgba(10,10,10,0.03) 65%, rgba(10,10,10,0.25) 80%, rgba(10,10,10,0.75) 94%, rgba(10,10,10,1) 100%),
+              linear-gradient(180deg, rgba(10,10,10,1) 0%, transparent 22%, transparent 78%, rgba(10,10,10,1) 100%);
   pointer-events: none;
 }
 
