@@ -119,81 +119,19 @@ function initScrollAnimations() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Default reveal settings - extremely subtle
-  const revealDefaults = {
-    opacity: 0,
-    y: 24,
-    duration: 1.6,
-    ease: 'power2.out',
-    clearProps: 'opacity, transform'
-  };
-
-  // Section headers reveal
-  gsap.utils.toArray('.section-title, .hero-eyebrow, h2').forEach(element => {
-    gsap.from(element, {
-      ...revealDefaults,
-      y: 16,
-      scrollTrigger: {
-        trigger: element,
-        start: 'top 88%',
-        toggleActions: 'play none none reverse'
-      }
-    });
-  });
-
-  // Body text reveal
-  gsap.utils.toArray('.lead, .lead-large, p:not(.footer-content p)').forEach(element => {
-    gsap.from(element, {
-      ...revealDefaults,
-      y: 12,
-      delay: 0.15,
-      scrollTrigger: {
-        trigger: element,
-        start: 'top 85%',
-        toggleActions: 'play none none reverse'
-      }
-    });
-  });
-
-  // Value cards staggered reveal
-  gsap.utils.toArray('.value-card').forEach((card, i) => {
-    gsap.from(card, {
-      ...revealDefaults,
-      y: 20,
-      delay: 0.1 + (i * 0.12),
-      scrollTrigger: {
-        trigger: card.parentElement,
-        start: 'top 82%',
-        toggleActions: 'play none none reverse'
-      }
-    });
-  });
-
-  // Service cards staggered reveal
-  gsap.utils.toArray('.service-card').forEach((card, i) => {
-    gsap.from(card, {
-      ...revealDefaults,
-      y: 18,
-      delay: 0.08 + (i * 0.09),
-      scrollTrigger: {
-        trigger: card.parentElement,
-        start: 'top 80%',
-        toggleActions: 'play none none reverse'
-      }
-    });
-  });
-
-  // Narrative sections gentle fade
-  gsap.utils.toArray('.narrative-section').forEach(section => {
+  // Simple clean reveal - only one animation per section
+  gsap.utils.toArray('.narrative-section, .standard-section').forEach((section, i) => {
     gsap.from(section, {
       opacity: 0,
-      duration: 2.2,
-      ease: 'power1.out',
+      y: 18,
+      duration: 1.4,
+      ease: 'power2.out',
+      delay: 0.06 + (i * 0.08),
+      clearProps: 'opacity, transform',
       scrollTrigger: {
         trigger: section,
-        start: 'top 92%',
-        end: 'top 65%',
-        scrub: true
+        start: 'top 88%',
+        toggleActions: 'play none none none'
       }
     });
   });
