@@ -88,19 +88,13 @@ function enableSite() {
   gsap.killTweensOf('*');
   gsap.set('body', { overflow: 'auto' });
   
-  gsap.to('#main-content', {
+  gsap.set('#main-content', {
     opacity: 1,
-    y: 0,
-    duration: 1.4,
-    ease: 'expo.out',
-    delay: 0.15
+    y: 0
   });
   
-  gsap.to('#site-header', {
+  gsap.set('#site-header', {
     y: 0,
-    opacity: 1,
-    duration: 1.1,
-    ease: 'expo.out',
-    delay: 0.3
+    opacity: 1
   });
 }
