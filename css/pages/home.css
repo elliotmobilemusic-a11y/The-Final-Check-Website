@@ -9,7 +9,7 @@ body {
   background-color: var(--color-black);
 }
 
-/* Atmospheric Decorative Imagery */
+/* ATMOSPHERE TEST MODE - VISIBILITY CHECK */
 .home-atmosphere {
   position: fixed;
   left: 0;
@@ -23,40 +23,45 @@ body {
 .atmosphere-left {
   position: absolute;
   left: 0;
-  top: 12vh;
-  height: 55vh;
-  width: auto;
-  object-fit: contain;
-  opacity: 0.94;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  height: auto;
+  opacity: 1;
+  display: block;
+  visibility: visible;
+  pointer-events: none;
+  mix-blend-mode: normal;
+  filter: none;
+  mask: none;
+  -webkit-mask: none;
+  outline: 1px solid red;
+  z-index: 1;
 }
 
 .atmosphere-right {
   position: absolute;
   right: 0;
-  top: 115vh;
-  height: 55vh;
-  width: auto;
-  object-fit: contain;
-  opacity: 0.94;
-}
-
-/* Soft inner edge fade only */
-.home-atmosphere::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(90deg, transparent 0%, transparent 22%, var(--color-black) 50%),
-              linear-gradient(270deg, transparent 0%, transparent 78%, var(--color-black) 100%);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  height: auto;
+  opacity: 1;
+  display: block;
+  visibility: visible;
   pointer-events: none;
+  mix-blend-mode: normal;
+  filter: none;
+  mask: none;
+  -webkit-mask: none;
+  outline: 1px solid red;
+  z-index: 1;
 }
 
 /* All Sections are fully transparent */
 .narrative-section {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   background: transparent;
 }
 
