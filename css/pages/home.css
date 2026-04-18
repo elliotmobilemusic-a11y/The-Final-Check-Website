@@ -21,6 +21,9 @@
   background-image: url('/assets/images/ChatGPT Image Apr 18, 2026, 12_10_32 PM.png');
   background-position: left center;
   background-size: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  filter: contrast(0.95) brightness(0.92);
   background-repeat: no-repeat;
 }
 

@@ -99,7 +99,9 @@ h1 {
 
 h2 {
   font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin-bottom: var(--space-lg);
 }
 
 h3 {
@@ -116,7 +118,13 @@ p {
 
 p.lead {
   font-size: 1.25rem;
-  line-height: 1.6;
+  line-height: 1.65;
+  font-weight: 300;
+  letter-spacing: 0.005em;
+  max-width: 62ch;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color-light);
 }
 
 /* Container System */
