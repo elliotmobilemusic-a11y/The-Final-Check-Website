@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
      * Submit Form to API
      */
     async function submitForm(data) {
-        const endpoint = window.CLIENT_INTAKE_CONFIG.APP_BASE_URL + window.CLIENT_INTAKE_CONFIG.INTAKE_ENDPOINT;
+        const endpoint = window.CLIENT_INTAKE_CONFIG.APP_BASE_URL + window.CLIENT_INTAKE_CONFIG.SUBMIT_ENDPOINT;
         
         const response = await fetch(endpoint, {
             method: 'POST',
