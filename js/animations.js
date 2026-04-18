@@ -110,48 +110,52 @@ function enableSite() {
   
   gsap.set('body', { overflow: 'auto' });
   
-  // Smooth elegant reveal of page content
-  gsap.fromTo('#site-header', {
-    y: -30,
-    opacity: 0
-  }, {
+  // Ensure all content is visible immediately
+  gsap.set('#site-header', {
     y: 0,
+    opacity: 1
+  });
+
+  gsap.set('#main-content', {
     opacity: 1,
-    duration: 1.2,
+    y: 0
+  });
+
+  gsap.set('.hero-section, .services-section, #site-footer', {
+    opacity: 1,
+    y: 0
+  });
+
+  // Smooth elegant reveal animation
+  gsap.from('#site-header', {
+    y: -20,
+    opacity: 0,
+    duration: 1.1,
     ease: 'expo.out',
     delay: 0.1
   });
 
-  gsap.fromTo('#main-content .hero-section', {
-    y: 20,
-    opacity: 0
-  }, {
-    y: 0,
-    opacity: 1,
-    duration: 1.4,
+  gsap.from('.hero-section', {
+    y: 12,
+    opacity: 0,
+    duration: 1.3,
     ease: 'expo.out',
-    delay: 0.2
+    delay: 0.15
   });
 
-  gsap.fromTo('#main-content .services-section', {
-    y: 30,
-    opacity: 0
-  }, {
-    y: 0,
-    opacity: 1,
-    duration: 1.5,
-    ease: 'expo.out',
-    delay: 0.4
-  });
-
-  gsap.fromTo('#site-footer', {
-    y: 20,
-    opacity: 0
-  }, {
-    y: 0,
-    opacity: 1,
+  gsap.from('.services-section', {
+    y: 18,
+    opacity: 0,
     duration: 1.4,
     ease: 'expo.out',
-    delay: 0.55
+    delay: 0.3
+  });
+
+  gsap.from('#site-footer', {
+    y: 12,
+    opacity: 0,
+    duration: 1.2,
+    ease: 'expo.out',
+    delay: 0.45
   });
 }
