@@ -19,6 +19,16 @@ body {
   padding: 0;
 }
 
+#main-content {
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
+}
+
+.atmosphere-wrapper {
+  overflow-x: clip;
+}
+
 /* Extremely subtle page depth gradient */
 body::before {
   content: '';
@@ -58,48 +68,72 @@ body::before {
 
 .atmosphere-left {
   position: absolute;
-  left: -5%;
+  left: -6%;
   top: 0;
   height: 100%;
   max-height: 80vh;
   width: auto;
   object-fit: contain;
   object-position: center top;
-  opacity: 0.38;
+  opacity: 0.36;
   pointer-events: none;
   filter: contrast(0.70) saturate(0.62) brightness(0.65) hue-rotate(1deg);
   
   mask-image: 
-    linear-gradient(to right, black 40%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    linear-gradient(to right, black 35%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
   -webkit-mask-image: 
-    linear-gradient(to right, black 40%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    linear-gradient(to right, black 35%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
   mask-composite: intersect;
   -webkit-mask-composite: source-in;
 }
 
+.atmosphere-left-wrapper::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at 20% 50%, rgba(60, 65, 75, 0.08) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
 .atmosphere-right {
   position: absolute;
-  right: -5%;
-  top: 60vh;
+  right: -6%;
+  top: 65vh;
   height: auto;
   max-height: 70vh;
   width: auto;
   object-fit: contain;
   object-position: center top;
-  opacity: 0.38;
+  opacity: 0.36;
   pointer-events: none;
   filter: contrast(0.70) saturate(0.62) brightness(0.65) hue-rotate(1deg);
   
   mask-image: 
-    linear-gradient(to left, black 40%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    linear-gradient(to left, black 35%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
   -webkit-mask-image: 
-    linear-gradient(to left, black 40%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    linear-gradient(to left, black 35%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
   mask-composite: intersect;
   -webkit-mask-composite: source-in;
+}
+
+.atmosphere-right-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at 80% 50%, rgba(60, 65, 75, 0.08) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
 }
 
 /* ========================================
@@ -208,9 +242,23 @@ body::before {
 
 .value-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-xl);
   margin-top: var(--space-2xl);
+}
+
+.value-card:last-child {
+  grid-column: 2 / 3;
+}
+
+@media (max-width: 992px) {
+  .value-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .value-card:last-child {
+    grid-column: auto;
+  }
 }
 
 .value-card {
@@ -233,28 +281,45 @@ body::before {
 }
 
 .about-intro {
-  text-align: center;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-intro h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--space-sm);
 }
 
 .about-intro .lead {
-  text-align: center;
+  text-align: left;
   opacity: 0.7;
   margin-bottom: var(--space-lg);
 }
 
 .about-intro p {
-  text-align: center;
-  max-width: 680px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: left;
   margin-bottom: var(--space-md);
   line-height: 1.8;
   opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .about-intro {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    text-align: center;
+  }
+  
+  .about-intro h2,
+  .about-intro .lead,
+  .about-intro p {
+    text-align: center;
+  }
 }
 
 /* Standard Content Section */
@@ -292,12 +357,15 @@ body::before {
 .service-card h3 {
   margin-bottom: var(--space-sm);
   font-weight: 600;
+  text-align: center;
 }
 
 .service-card p {
   font-size: 0.95rem;
   line-height: 1.65;
   margin: 0;
+  text-align: center;
+  opacity: 0.8;
 }
 
 /* Footer */

@@ -119,20 +119,47 @@ function initScrollAnimations() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Simple clean reveal - only one animation per section
-  gsap.utils.toArray('.narrative-section, .standard-section').forEach((section, i) => {
-    gsap.from(section, {
-      opacity: 0,
-      y: 18,
-      duration: 1.4,
-      ease: 'power2.out',
-      delay: 0.06 + (i * 0.08),
-      clearProps: 'opacity, transform',
-      scrollTrigger: {
-        trigger: section,
-        start: 'top 88%',
-        toggleActions: 'play none none none'
+  const revealSelectors = `
+    .hero-eyebrow,
+    section h2,
+    .lead,
+    .lead-large,
+    .narrative-section p,
+    .section-title,
+    .value-card,
+    .about-portrait,
+    .about-content > *,
+    .service-card,
+    .footer-content > *
+  `;
+
+  // Process each section individually with clean isolated timeline
+  document.querySelectorAll('.section-1, .section-2, .section-3, .standard-section, #site-footer').forEach(section => {
+    
+    const targets = section.querySelectorAll(revealSelectors);
+    
+    if (targets.length === 0) return;
+
+    gsap.fromTo(targets, 
+      { 
+        autoAlpha: 0, 
+        y: 20 
+      }, 
+      { 
+        autoAlpha: 1, 
+        y: 0, 
+        duration: 0.9, 
+        stagger: 0.08, 
+        ease: 'power2.out',
+        immediateRender: false,
+        clearProps: 'opacity, transform',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 82%',
+          once: true,
+          toggleActions: 'play none none none'
+        }
       }
-    });
+    );
   });
 }
