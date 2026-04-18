@@ -167,8 +167,8 @@ body::before {
   align-items: center;
   background: transparent;
   overflow: visible;
-  padding-top: 14vh;
-  padding-bottom: 16vh;
+  padding-top: 12vh;
+  padding-bottom: 14vh;
   z-index: 2;
 }
 
@@ -384,7 +384,7 @@ body::before {
   background: transparent;
   position: relative;
   z-index: 3;
-  padding: var(--space-xl) 0 var(--space-xl) 0;
+  padding: 10vh 0 12vh 0;
 }
 
 /* ========================================
@@ -395,8 +395,8 @@ body::before {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: var(--space-lg);
-  margin-top: var(--space-xl);
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
 }
 
 .service-card {
@@ -427,7 +427,7 @@ body::before {
 
 /* Footer */
 #site-footer {
-  padding: var(--space-xl) 0;
+  padding: 8vh 0;
   background: transparent;
   border-top: 1px solid rgba(120, 125, 140, 0.12);
   position: relative;
