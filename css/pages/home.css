@@ -15,12 +15,12 @@
 .section-1 .background-image {
   position: absolute;
   left: 0;
-  top: -4rem;
-  bottom: -4rem;
+  top: -8rem;
+  bottom: -8rem;
   width: 100%;
   background-image: url('/assets/images/ChatGPT Image Apr 18, 2026, 12_10_32 PM.png');
   background-position: left center;
-  background-size: auto calc(100% - 8rem);
+  background-size: auto calc(100% - 16rem);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   filter: contrast(0.85) brightness(0.80);
@@ -35,7 +35,8 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background: radial-gradient(ellipse 65% 95% at 12% 50%, transparent 0%, rgba(10,10,10,0) 50%, rgba(10,10,10,0.02) 70%, rgba(10,10,10,0.2) 85%, rgba(10,10,10,0.7) 96%, rgba(10,10,10,1) 100%);
+  background: radial-gradient(ellipse 65% 75% at 12% 50%, transparent 0%, rgba(10,10,10,0) 50%, rgba(10,10,10,0.02) 70%, rgba(10,10,10,0.2) 85%, rgba(10,10,10,0.7) 96%, rgba(10,10,10,1) 100%),
+              linear-gradient(180deg, rgba(10,10,10,1) 0%, transparent 15%, transparent 85%, rgba(10,10,10,1) 100%);
   pointer-events: none;
 }
 
@@ -47,12 +48,12 @@
 .section-2 .background-image {
   position: absolute;
   right: 0;
-  top: -4rem;
-  bottom: -4rem;
+  top: -8rem;
+  bottom: -8rem;
   width: 100%;
   background-image: url('/assets/images/ChatGPT Image Apr 18, 2026, 12_11_59 PM.png');
   background-position: right center;
-  background-size: auto calc(100% - 8rem);
+  background-size: auto calc(100% - 16rem);
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   filter: contrast(0.88) brightness(0.84);
@@ -67,7 +68,8 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background: radial-gradient(ellipse 65% 95% at 88% 50%, transparent 0%, rgba(10,10,10,0) 50%, rgba(10,10,10,0.02) 70%, rgba(10,10,10,0.2) 85%, rgba(10,10,10,0.7) 96%, rgba(10,10,10,1) 100%);
+  background: radial-gradient(ellipse 65% 75% at 88% 50%, transparent 0%, rgba(10,10,10,0) 50%, rgba(10,10,10,0.02) 70%, rgba(10,10,10,0.2) 85%, rgba(10,10,10,0.7) 96%, rgba(10,10,10,1) 100%),
+              linear-gradient(180deg, rgba(10,10,10,1) 0%, transparent 15%, transparent 85%, rgba(10,10,10,1) 100%);
   pointer-events: none;
 }
 
