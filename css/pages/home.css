@@ -3,9 +3,24 @@
  * Premium Hospitality Consultancy
  */
 
-/* Pure black page background */
+/* Continuous Premium Global Background System */
 body {
   background-color: var(--color-black);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background: 
+    radial-gradient(ellipse 50% 40% at 50% 30%, rgba(20,20,20,0.4) 0%, rgba(10,10,10,0) 70%),
+    radial-gradient(ellipse 50% 40% at 50% 70%, rgba(20,20,20,0.4) 0%, rgba(10,10,10,0) 70%),
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(15,15,15,0.5) 0%, rgba(10,10,10,0) 100%);
 }
 
 /* Hero Section */
@@ -18,35 +33,49 @@ body {
   overflow: hidden;
 }
 
-/* Decorative Side Imagery */
+/* Atmospheric Decorative Imagery - Premium Integration */
 .atmosphere-left {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 15vh;
   width: auto;
   height: 70vh;
   object-fit: contain;
-  opacity: 0.95;
+  opacity: 0.85;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
+  filter: contrast(0.92) saturate(0.88) brightness(0.91);
   
-  mask-image: linear-gradient(to right, black 82%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, black 82%, transparent 100%);
+  mask-image: 
+    linear-gradient(to right, black 80%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  -webkit-mask-image: 
+    linear-gradient(to right, black 80%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
 }
 
 .atmosphere-right {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 115vh;
   width: auto;
   height: 70vh;
   object-fit: contain;
-  opacity: 0.95;
+  opacity: 0.85;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
+  filter: contrast(0.92) saturate(0.88) brightness(0.91);
   
-  mask-image: linear-gradient(to left, black 82%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to left, black 82%, transparent 100%);
+  mask-image: 
+    linear-gradient(to left, black 80%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  -webkit-mask-image: 
+    linear-gradient(to left, black 80%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
 }
 
 /* Hero Content */
