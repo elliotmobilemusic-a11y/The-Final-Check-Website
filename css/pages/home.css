@@ -83,6 +83,17 @@ body::after {
   -webkit-mask-composite: source-in;
 }
 
+.atmosphere-left::before {
+  content: '';
+  position: absolute;
+  left: -50%;
+  top: -30%;
+  width: 220%;
+  height: 160%;
+  background: radial-gradient(ellipse 45% 45% at 12% 50%, rgba(32,32,40,0.22) 0%, transparent 72%);
+  pointer-events: none;
+}
+
 .atmosphere-left::after {
   content: '';
   position: absolute;
@@ -90,7 +101,7 @@ body::after {
   top: -15%;
   width: 180%;
   height: 130%;
-  background: radial-gradient(ellipse 50% 50% at 12% 50%, rgba(0,0,0,0.8) 0%, transparent 78%);
+  background: radial-gradient(ellipse 50% 50% at 12% 50%, rgba(0,0,0,0.85) 0%, transparent 78%);
   pointer-events: none;
 }
 
@@ -116,6 +127,17 @@ body::after {
   -webkit-mask-composite: source-in;
 }
 
+.atmosphere-right::before {
+  content: '';
+  position: absolute;
+  right: -50%;
+  top: -30%;
+  width: 220%;
+  height: 160%;
+  background: radial-gradient(ellipse 45% 45% at 88% 50%, rgba(32,32,40,0.22) 0%, transparent 72%);
+  pointer-events: none;
+}
+
 .atmosphere-right::after {
   content: '';
   position: absolute;
@@ -123,7 +145,7 @@ body::after {
   top: -15%;
   width: 180%;
   height: 130%;
-  background: radial-gradient(ellipse 50% 50% at 88% 50%, rgba(0,0,0,0.8) 0%, transparent 78%);
+  background: radial-gradient(ellipse 50% 50% at 88% 50%, rgba(0,0,0,0.85) 0%, transparent 78%);
   pointer-events: none;
 }
 
