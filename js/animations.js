@@ -22,6 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Run opening animation
   runIntroAnimation();
 
+  // Allow Spacebar to skip / speed up intro
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Space' && !siteEnabled) {
+      e.preventDefault();
+      skipIntroAnimation();
+    }
+  }, { once: true });
+
   // Mark as seen for this session
   sessionStorage.setItem('hasSeenIntro', 'true');
   
