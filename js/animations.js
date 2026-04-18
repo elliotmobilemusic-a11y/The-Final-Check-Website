@@ -7,20 +7,14 @@ let siteEnabled = false;
 
 document.addEventListener('DOMContentLoaded', () => {
   
-  // Skip animation for reduced motion users
+  // Skip animation for reduced motion users only
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     skipIntroAnimation();
     return;
   }
   
-  
-  // Run opening animation
+  // Always run opening animation on every page load
   runIntroAnimation();
-  
-  // Allow user to skip on any interaction
-  document.addEventListener('click', skipIntroAnimation, { once: true });
-  document.addEventListener('keydown', skipIntroAnimation, { once: true });
-  document.addEventListener('wheel', skipIntroAnimation, { once: true });
   
 });
 
