@@ -110,13 +110,48 @@ function enableSite() {
   
   gsap.set('body', { overflow: 'auto' });
   
-  gsap.set('#main-content', {
-    opacity: 1,
-    y: 0
-  });
-  
-  gsap.set('#site-header', {
+  // Smooth elegant reveal of page content
+  gsap.fromTo('#site-header', {
+    y: -30,
+    opacity: 0
+  }, {
     y: 0,
-    opacity: 1
+    opacity: 1,
+    duration: 1.2,
+    ease: 'expo.out',
+    delay: 0.1
+  });
+
+  gsap.fromTo('#main-content .hero-section', {
+    y: 20,
+    opacity: 0
+  }, {
+    y: 0,
+    opacity: 1,
+    duration: 1.4,
+    ease: 'expo.out',
+    delay: 0.2
+  });
+
+  gsap.fromTo('#main-content .services-section', {
+    y: 30,
+    opacity: 0
+  }, {
+    y: 0,
+    opacity: 1,
+    duration: 1.5,
+    ease: 'expo.out',
+    delay: 0.4
+  });
+
+  gsap.fromTo('#site-footer', {
+    y: 20,
+    opacity: 0
+  }, {
+    y: 0,
+    opacity: 1,
+    duration: 1.4,
+    ease: 'expo.out',
+    delay: 0.55
   });
 }
