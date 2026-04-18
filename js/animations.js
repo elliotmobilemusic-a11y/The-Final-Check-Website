@@ -3,6 +3,8 @@
  * Premium Hospitality Brand Reveal
  */
 
+let siteEnabled = false;
+
 document.addEventListener('DOMContentLoaded', () => {
   
   // Skip animation for reduced motion users
@@ -86,6 +88,10 @@ function skipIntroAnimation() {
 }
 
 function enableSite() {
+  if (siteEnabled) return;
+  siteEnabled = true;
+
+  gsap.killTweensOf('*');
   gsap.set('body', { overflow: 'auto' });
   
   gsap.to('#main-content', {
@@ -105,7 +111,7 @@ function enableSite() {
   });
   
   // Initialise premium scroll animations
-  initScrollAnimations();
+  setTimeout(initScrollAnimations, 600);
 }
 
 /**
@@ -119,47 +125,117 @@ function initScrollAnimations() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const revealSelectors = `
-    .hero-eyebrow,
-    section h2,
-    .lead,
-    .lead-large,
-    .narrative-section p,
-    .section-title,
-    .value-card,
-    .about-portrait,
-    .about-content > *,
-    .service-card,
-    .footer-content > *
-  `;
-
-  // Process each section individually with clean isolated timeline
-  document.querySelectorAll('.section-1, .section-2, .section-3, .standard-section, #site-footer').forEach(section => {
-    
-    const targets = section.querySelectorAll(revealSelectors);
-    
-    if (targets.length === 0) return;
-
-    gsap.fromTo(targets, 
-      { 
-        autoAlpha: 0, 
-        y: 20 
-      }, 
-      { 
-        autoAlpha: 1, 
-        y: 0, 
-        duration: 0.9, 
-        stagger: 0.08, 
-        ease: 'power2.out',
-        immediateRender: false,
-        clearProps: 'opacity, transform',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 82%',
-          once: true,
-          toggleActions: 'play none none none'
-        }
+  // Hero Section
+  gsap.fromTo('.section-1 .hero-eyebrow, .section-1 h2, .section-1 .lead',
+    { autoAlpha: 0, y: 20 },
+    {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.9,
+      stagger: 0.07,
+      ease: 'power2.out',
+      immediateRender: false,
+      clearProps: 'opacity, transform',
+      scrollTrigger: {
+        trigger: '.section-1',
+        start: 'top 82%',
+        once: true
       }
-    );
-  });
+    }
+  );
+
+  // Why Jason Section
+  gsap.fromTo('.section-3 .section-title, .value-card',
+    { autoAlpha: 0, y: 20 },
+    {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.9,
+      stagger: 0.07,
+      ease: 'power2.out',
+      immediateRender: false,
+      clearProps: 'opacity, transform',
+      scrollTrigger: {
+        trigger: '.section-3',
+        start: 'top 82%',
+        once: true
+      }
+    }
+  );
+
+  // Jason Credibility Summary
+  gsap.fromTo('.section-2 .lead-large, .section-2 p',
+    { autoAlpha: 0, y: 18 },
+    {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.85,
+      stagger: 0.06,
+      ease: 'power2.out',
+      immediateRender: false,
+      clearProps: 'opacity, transform',
+      scrollTrigger: {
+        trigger: '.section-2',
+        start: 'top 82%',
+        once: true
+      }
+    }
+  );
+
+  // Jason Profile Section
+  gsap.fromTo('.about-portrait, .about-content > *',
+    { autoAlpha: 0, y: 20 },
+    {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.9,
+      stagger: 0.07,
+      ease: 'power2.out',
+      immediateRender: false,
+      clearProps: 'opacity, transform',
+      scrollTrigger: {
+        trigger: '.about-intro',
+        start: 'top 82%',
+        once: true
+      }
+    }
+  );
+
+  // Services Section
+  gsap.fromTo('.standard-section .section-title, .service-card',
+    { autoAlpha: 0, y: 18 },
+    {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.85,
+      stagger: 0.06,
+      ease: 'power2.out',
+      immediateRender: false,
+      clearProps: 'opacity, transform',
+      scrollTrigger: {
+        trigger: '.standard-section',
+        start: 'top 82%',
+        once: true
+      }
+    }
+  );
+
+  // Footer
+  gsap.fromTo('.footer-content > *',
+    { autoAlpha: 0, y: 16 },
+    {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.06,
+      ease: 'power2.out',
+      immediateRender: false,
+      clearProps: 'opacity, transform',
+      scrollTrigger: {
+        trigger: '#site-footer',
+        start: 'top 90%',
+        once: true
+      }
+    }
+  );
 }
