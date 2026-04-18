@@ -137,8 +137,8 @@ p.lead {
 
 .container-narrow {
   max-width: 1024px;
-  margin-left: 45%;
-  transform: translateX(-50%);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
 }
 
 .container-wide {
