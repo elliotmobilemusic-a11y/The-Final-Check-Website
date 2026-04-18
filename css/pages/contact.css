@@ -1,0 +1,252 @@
+/**
+ * Contact Page Styles
+ * Premium Dark Client Intake Form
+ * Luxury Hospitality Consultancy
+ */
+
+.contact-form-section {
+  padding-top: 6vh;
+  padding-bottom: 14vh;
+  position: relative;
+  z-index: 3;
+}
+
+.contact-form-container {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.client-intake-form {
+  background-color: rgba(22, 22, 27, 0.45);
+  border: 1px solid rgba(120, 125, 140, 0.12);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  backdrop-filter: blur(12px);
+  position: relative;
+}
+
+.client-intake-form::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(60, 65, 75, 0.08) 0%, transparent 60%);
+  border-radius: var(--radius-lg);
+  pointer-events: none;
+}
+
+.client-intake-form.loading::before {
+  animation: formPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes formPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+/* Success & Error States */
+.form-success-message,
+.form-error-message {
+  text-align: center;
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  border-radius: var(--radius-md);
+}
+
+.form-success-message {
+  background-color: rgba(40, 80, 60, 0.25);
+  border: 1px solid rgba(80, 140, 110, 0.25);
+}
+
+.form-error-message {
+  background-color: rgba(100, 50, 50, 0.25);
+  border: 1px solid rgba(160, 80, 80, 0.25);
+}
+
+.success-icon,
+.error-icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-md);
+  opacity: 0.8;
+}
+
+.form-success-message h3,
+.form-error-message h3 {
+  margin-bottom: var(--space-sm);
+  font-weight: 500;
+  font-size: 1.15rem;
+}
+
+.form-success-message p,
+.form-error-message p {
+  margin: 0;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* Form Layout */
+.form-fields {
+  position: relative;
+  z-index: 1;
+}
+
+.form-group {
+  margin-bottom: var(--space-lg);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+/* Form Labels */
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-sm);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  opacity: 0.9;
+}
+
+.form-group label .required {
+  color: #c47868;
+  opacity: 0.9;
+}
+
+/* Input Fields */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  background-color: rgba(12, 12, 15, 0.7);
+  border: 1px solid rgba(120, 125, 140, 0.18);
+  border-radius: var(--radius-md);
+  color: white;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.25s var(--ease-out-expo);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group textarea {
+  min-height: 90px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23949BA5' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-position: right var(--space-md) center;
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  padding-right: 3rem;
+  cursor: pointer;
+}
+
+.form-group input:hover,
+.form-group textarea:hover,
+.form-group select:hover {
+  border-color: rgba(120, 125, 140, 0.28);
+  background-color: rgba(15, 15, 19, 0.7);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: rgba(150, 155, 170, 0.45);
+  background-color: rgba(15, 15, 19, 0.85);
+  box-shadow: 0 0 0 3px rgba(120, 125, 140, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+  opacity: 1;
+}
+
+/* Form Validation */
+.form-group.has-error input,
+.form-group.has-error textarea {
+  border-color: rgba(196, 120, 104, 0.5);
+  background-color: rgba(25, 15, 15, 0.4);
+}
+
+.form-error-text {
+  margin-top: var(--space-xs);
+  font-size: 0.8rem;
+  color: #c47868;
+  opacity: 0.9;
+  min-height: 1rem;
+}
+
+/* Form Dividers */
+.form-divider {
+  height: 1px;
+  width: 100%;
+  margin: var(--space-xl) 0;
+  background: linear-gradient(to right, transparent, rgba(120, 125, 140, 0.2), transparent);
+}
+
+.form-section-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: var(--space-xs);
+  text-align: center;
+}
+
+.form-section-description {
+  text-align: center;
+  opacity: 0.6;
+  font-size: 0.85rem;
+  margin-bottom: var(--space-xl);
+}
+
+/* Site Entry */
+.site-entry {
+  background-color: rgba(15, 15, 19, 0.3);
+  border: 1px solid rgba(120, 125, 140, 0.1);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-lg);
+}
+
+/* Submit Button */
+.form-submit-container {
+  margin-top: var(--space-2xl);
+}
+
+.btn-full-width {
+  width: 100%;
+  justify-content: center;
+}
+
+.btn.loading .btn-normal-text {
+  display: none;
+}
+
+.btn.loading .btn-loading-text {
+  display: inline;
+}
+
+.btn-loading-text {
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .client-intake-form {
+    padding: var(--space-xl) var(--space-lg);
+    margin: 0 var(--space-md);
+  }
+}
