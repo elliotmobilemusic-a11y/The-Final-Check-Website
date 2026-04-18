@@ -159,13 +159,13 @@ body::before {
 /* Hero Section */
 .section-1 {
   position: relative;
-  min-height: 72vh;
+  min-height: 68vh;
   display: flex;
   align-items: center;
   background: transparent;
   overflow: visible;
   padding-top: 4vh;
-  padding-bottom: 6vh;
+  padding-bottom: 4vh;
   z-index: 2;
 }
 
@@ -210,7 +210,7 @@ body::before {
 }
 
 .section-2 {
-  padding: var(--space-2xl) 0;
+  padding: var(--space-xl) 0;
 }
 
 .section-2 .credibility-intro {
@@ -236,7 +236,7 @@ body::before {
 }
 
 .section-3 {
-  padding: var(--space-xl) 0;
+  padding: var(--space-2xl) 0 var(--space-lg) 0;
 }
 
 .section-title {
@@ -299,7 +299,7 @@ body::before {
 .about-intro {
   display: grid;
   grid-template-columns: 320px 1fr;
-  gap: var(--space-2xl);
+  gap: var(--space-xl);
   align-items: center;
   max-width: 900px;
   margin-left: auto;
@@ -343,7 +343,7 @@ body::before {
   background: transparent;
   position: relative;
   z-index: 3;
-  padding: var(--space-2xl) 0;
+  padding: var(--space-2xl) 0 var(--space-xl) 0;
 }
 
 /* ========================================

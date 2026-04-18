@@ -125,85 +125,79 @@ function initScrollAnimations() {
 
   gsap.registerPlugin(ScrollTrigger);
 
+  // Force visible state first to prevent disappearing content
+  gsap.set([
+    '.section-1 .hero-eyebrow', '.section-1 h2', '.section-1 .lead',
+    '.section-3 .section-title', '.value-card',
+    '.section-2 .lead-large', '.section-2 p',
+    '.about-portrait', '.about-content > *',
+    '.standard-section .section-title', '.service-card',
+    '.footer-content > *'
+  ], { autoAlpha: 1, y: 0 });
+
   // Hero Section
   gsap.fromTo('.section-1 .hero-eyebrow, .section-1 h2, .section-1 .lead',
-    { autoAlpha: 0, y: 20 },
+    { autoAlpha: 0, y: 16 },
     {
       autoAlpha: 1,
       y: 0,
-      duration: 0.9,
-      stagger: 0.07,
+      duration: 0.85,
+      stagger: 0.06,
       ease: 'power2.out',
       immediateRender: false,
-      clearProps: 'opacity, transform',
+      overwrite: 'none',
       scrollTrigger: {
         trigger: '.section-1',
-        start: 'top 82%',
-        once: true
+        start: 'top 85%',
+        once: true,
+        toggleActions: 'play none none none'
       }
     }
   );
 
   // Why Jason Section
   gsap.fromTo('.section-3 .section-title, .value-card',
-    { autoAlpha: 0, y: 20 },
+    { autoAlpha: 0, y: 16 },
     {
       autoAlpha: 1,
       y: 0,
-      duration: 0.9,
-      stagger: 0.07,
+      duration: 0.85,
+      stagger: 0.06,
       ease: 'power2.out',
       immediateRender: false,
-      clearProps: 'opacity, transform',
+      overwrite: 'none',
       scrollTrigger: {
         trigger: '.section-3',
-        start: 'top 82%',
-        once: true
+        start: 'top 85%',
+        once: true,
+        toggleActions: 'play none none none'
       }
     }
   );
 
   // Jason Credibility Summary
   gsap.fromTo('.section-2 .lead-large, .section-2 p',
-    { autoAlpha: 0, y: 18 },
+    { autoAlpha: 0, y: 14 },
     {
       autoAlpha: 1,
       y: 0,
-      duration: 0.85,
-      stagger: 0.06,
+      duration: 0.8,
+      stagger: 0.05,
       ease: 'power2.out',
       immediateRender: false,
-      clearProps: 'opacity, transform',
+      overwrite: 'none',
       scrollTrigger: {
         trigger: '.section-2',
-        start: 'top 82%',
-        once: true
+        start: 'top 85%',
+        once: true,
+        toggleActions: 'play none none none'
       }
     }
   );
 
   // Jason Profile Section
   gsap.fromTo('.about-portrait, .about-content > *',
-    { autoAlpha: 0, y: 20 },
-    {
-      autoAlpha: 1,
-      y: 0,
-      duration: 0.9,
-      stagger: 0.07,
-      ease: 'power2.out',
-      immediateRender: false,
-      clearProps: 'opacity, transform',
-      scrollTrigger: {
-        trigger: '.about-intro',
-        start: 'top 82%',
-        once: true
-      }
-    }
-  );
-
-  // Services Section
-  gsap.fromTo('.standard-section .section-title, .service-card',
-    { autoAlpha: 0, y: 18 },
+    { autoAlpha: 0, y: 16 },
     {
       autoAlpha: 1,
       y: 0,
@@ -211,30 +205,52 @@ function initScrollAnimations() {
       stagger: 0.06,
       ease: 'power2.out',
       immediateRender: false,
-      clearProps: 'opacity, transform',
+      overwrite: 'none',
+      scrollTrigger: {
+        trigger: '.about-intro',
+        start: 'top 85%',
+        once: true,
+        toggleActions: 'play none none none'
+      }
+    }
+  );
+
+  // Services Section
+  gsap.fromTo('.standard-section .section-title, .service-card',
+    { autoAlpha: 0, y: 14 },
+    {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.05,
+      ease: 'power2.out',
+      immediateRender: false,
+      overwrite: 'none',
       scrollTrigger: {
         trigger: '.standard-section',
-        start: 'top 82%',
-        once: true
+        start: 'top 85%',
+        once: true,
+        toggleActions: 'play none none none'
       }
     }
   );
 
   // Footer
   gsap.fromTo('.footer-content > *',
-    { autoAlpha: 0, y: 16 },
+    { autoAlpha: 0, y: 12 },
     {
       autoAlpha: 1,
       y: 0,
-      duration: 0.8,
-      stagger: 0.06,
+      duration: 0.75,
+      stagger: 0.05,
       ease: 'power2.out',
       immediateRender: false,
-      clearProps: 'opacity, transform',
+      overwrite: 'none',
       scrollTrigger: {
         trigger: '#site-footer',
         start: 'top 90%',
-        once: true
+        once: true,
+        toggleActions: 'play none none none'
       }
     }
   );
