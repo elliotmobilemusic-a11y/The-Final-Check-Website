@@ -133,12 +133,16 @@ p.lead {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 var(--space-lg);
+  position: relative;
+  z-index: 10;
 }
 
 .container-narrow {
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 var(--space-xl);
+  position: relative;
+  z-index: 10;
 }
 
 .container-wide {

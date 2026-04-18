@@ -40,13 +40,9 @@
   pointer-events: none;
 }
 
-.section-1 > .container {
-  position: relative;
-  z-index: 10;
-}
 
 .section-2 {
-  background-color: var(--color-dark);
+  background-color: var(--color-black);
 }
 
 .section-2 .background-image {
@@ -77,10 +73,6 @@
   pointer-events: none;
 }
 
-.section-2 > .container {
-  position: relative;
-  z-index: 10;
-}
 
 /* Service Cards */
 .services-grid {
