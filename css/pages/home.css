@@ -16,9 +16,9 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 55%;
+  width: 52%;
   height: 100%;
-  background-image: url('/assets/images/Bazaart_C8F19A78-2E11-451B-883F-E7F2C2D7AED3.JPEG');
+  background-image: url('/assets/images/ChatGPT Image Apr 18, 2026, 12_10_32 PM.png');
   background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,12 +31,35 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, transparent 0%, rgba(10,10,10,0.3) 65%, rgba(10,10,10,1) 92%);
+  background: linear-gradient(90deg, transparent 0%, rgba(10,10,10,0.3) 65%, rgba(10,10,10,1) 90%);
   pointer-events: none;
 }
 
 .section-2 {
   background-color: var(--color-dark);
+}
+
+.section-2 .background-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 48%;
+  height: 100%;
+  background-image: url('/assets/images/ChatGPT Image Apr 18, 2026, 12_11_59 PM.png');
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-2 .background-image::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(270deg, transparent 0%, rgba(18,18,18,0.3) 60%, rgba(18,18,18,1) 88%);
+  pointer-events: none;
 }
 
 /* Service Cards */
