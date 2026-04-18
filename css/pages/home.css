@@ -17,6 +17,9 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #main-content {
@@ -83,9 +86,9 @@ body::before {
   width: auto;
   object-fit: contain;
   object-position: center top;
-  opacity: 0.48;
+  opacity: 0.62;
   pointer-events: none;
-  filter: contrast(0.86) saturate(0.88) brightness(0.82) hue-rotate(0deg);
+  filter: contrast(1.08) saturate(1.15) brightness(0.88);
   
   mask-image: 
     linear-gradient(to right, black 35%, transparent 100%),
@@ -126,9 +129,9 @@ body::before {
   width: auto;
   object-fit: contain;
   object-position: center top;
-  opacity: 0.48;
+  opacity: 0.62;
   pointer-events: none;
-  filter: contrast(0.86) saturate(0.88) brightness(0.82) hue-rotate(0deg);
+  filter: contrast(1.08) saturate(1.15) brightness(0.88);
   
   mask-image: 
     linear-gradient(to left, black 35%, transparent 100%),
@@ -262,7 +265,7 @@ body::before {
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  filter: contrast(1.05) saturate(0.92);
+  filter: grayscale(100%) contrast(1.15) brightness(1.05);
 }
 
 .portrait-placeholder {
