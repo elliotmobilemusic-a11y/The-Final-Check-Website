@@ -487,6 +487,10 @@ body::before {
   margin-bottom: var(--space-sm);
   font-weight: 600;
   text-align: center;
+  min-height: 3.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service-card p {
@@ -495,6 +499,7 @@ body::before {
   margin: 0;
   text-align: center;
   opacity: 0.8;
+  min-height: 4.8em;
 }
 
 /* Footer */
