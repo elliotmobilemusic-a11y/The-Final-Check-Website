@@ -235,8 +235,16 @@ body::before {
   opacity: 0.85;
 }
 
-.section-3 {
+.why-jason-section {
   padding: var(--space-xl) 0 var(--space-md) 0;
+}
+
+.jason-summary-section {
+  padding: var(--space-lg) 0 var(--space-xl) 0;
+}
+
+.jason-profile-section {
+  padding: var(--space-xl) 0 var(--space-lg) 0;
 }
 
 .section-title {
