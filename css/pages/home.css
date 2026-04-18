@@ -35,8 +35,8 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, transparent 0%, rgba(10,10,10,0) 30%, rgba(10,10,10,0.05) 50%, rgba(10,10,10,0.2) 70%, rgba(10,10,10,0.6) 88%, rgba(10,10,10,0.9) 97%, rgba(10,10,10,1) 100%),
-              linear-gradient(180deg, rgba(10,10,10,1) 0%, transparent 15%, transparent 85%, rgba(10,10,10,1) 100%);
+  background: radial-gradient(ellipse 60% 85% at 15% 50%, transparent 0%, rgba(10,10,10,0) 40%, rgba(10,10,10,0.05) 60%, rgba(10,10,10,0.35) 80%, rgba(10,10,10,0.8) 94%, rgba(10,10,10,1) 100%),
+              linear-gradient(180deg, rgba(10,10,10,1) 0%, transparent 10%, transparent 90%, rgba(10,10,10,1) 100%);
   pointer-events: none;
 }
 
@@ -68,8 +68,8 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(270deg, transparent 0%, rgba(10,10,10,0) 30%, rgba(10,10,10,0.05) 50%, rgba(10,10,10,0.2) 70%, rgba(10,10,10,0.6) 88%, rgba(10,10,10,0.9) 97%, rgba(10,10,10,1) 100%),
-              linear-gradient(180deg, rgba(10,10,10,1) 0%, transparent 15%, transparent 85%, rgba(10,10,10,1) 100%);
+  background: radial-gradient(ellipse 60% 85% at 85% 50%, transparent 0%, rgba(10,10,10,0) 40%, rgba(10,10,10,0.05) 60%, rgba(10,10,10,0.35) 80%, rgba(10,10,10,0.8) 94%, rgba(10,10,10,1) 100%),
+              linear-gradient(180deg, rgba(10,10,10,1) 0%, transparent 10%, transparent 90%, rgba(10,10,10,1) 100%);
   pointer-events: none;
 }
 
