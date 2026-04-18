@@ -86,16 +86,16 @@ body::after {
   height: 78vh;
   width: auto;
   object-fit: contain;
-  opacity: 0.74;
+  opacity: 0.71;
   pointer-events: none;
-  filter: contrast(0.80) saturate(0.76) brightness(0.81);
+  filter: contrast(0.77) saturate(0.72) brightness(0.78) hue-rotate(3deg);
   
   mask-image: 
-    linear-gradient(to right, black 68%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%);
+    linear-gradient(to right, black 64%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 4%, black 96%, transparent 100%);
   -webkit-mask-image: 
-    linear-gradient(to right, black 68%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%);
+    linear-gradient(to right, black 64%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 4%, black 96%, transparent 100%);
   mask-composite: intersect;
   -webkit-mask-composite: source-in;
 }
@@ -107,7 +107,7 @@ body::after {
   top: -30%;
   width: 220%;
   height: 160%;
-  background: radial-gradient(ellipse 45% 45% at 12% 50%, rgba(32,32,40,0.22) 0%, transparent 72%);
+  background: radial-gradient(ellipse 45% 45% at 12% 50%, rgba(38,38,46,0.19) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -129,16 +129,16 @@ body::after {
   height: 78vh;
   width: auto;
   object-fit: contain;
-  opacity: 0.74;
+  opacity: 0.71;
   pointer-events: none;
-  filter: contrast(0.80) saturate(0.76) brightness(0.81);
+  filter: contrast(0.77) saturate(0.72) brightness(0.78) hue-rotate(3deg);
   
   mask-image: 
-    linear-gradient(to left, black 68%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%);
+    linear-gradient(to left, black 64%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 4%, black 96%, transparent 100%);
   -webkit-mask-image: 
-    linear-gradient(to left, black 68%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%);
+    linear-gradient(to left, black 64%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 4%, black 96%, transparent 100%);
   mask-composite: intersect;
   -webkit-mask-composite: source-in;
 }
@@ -150,7 +150,7 @@ body::after {
   top: -30%;
   width: 220%;
   height: 160%;
-  background: radial-gradient(ellipse 45% 45% at 88% 50%, rgba(32,32,40,0.22) 0%, transparent 72%);
+  background: radial-gradient(ellipse 45% 45% at 88% 50%, rgba(38,38,46,0.19) 0%, transparent 70%);
   pointer-events: none;
 }
 
