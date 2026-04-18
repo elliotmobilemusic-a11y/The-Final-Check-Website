@@ -483,6 +483,12 @@ body::before {
   background-color: #1B1B22;
 }
 
+.service-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 .service-card h3 {
   margin-bottom: var(--space-sm);
   font-weight: 600;
