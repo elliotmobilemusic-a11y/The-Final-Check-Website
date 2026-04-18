@@ -16,15 +16,16 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 40%;
   height: 100%;
   background-image: url('/assets/images/ChatGPT Image Apr 18, 2026, 12_10_32 PM.png');
-  background-position: 10% center;
-  background-size: 50% auto;
+  background-position: left center;
+  background-size: cover;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   filter: contrast(0.92) brightness(0.88);
   background-repeat: no-repeat;
+  z-index: 0;
 }
 
 .section-1 .background-image::after {
@@ -34,9 +35,14 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, transparent 0%, rgba(10,10,10,0.05) 30%, rgba(10,10,10,0.35) 45%, rgba(10,10,10,0.8) 55%, rgba(10,10,10,1) 65%),
-              linear-gradient(180deg, rgba(10,10,10,1) 0%, transparent 15%, transparent 85%, rgba(10,10,10,1) 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(10,10,10,0.02) 60%, rgba(10,10,10,0.3) 80%, rgba(10,10,10,0.8) 95%, rgba(10,10,10,1) 100%),
+              linear-gradient(180deg, rgba(10,10,10,0.85) 0%, transparent 20%, transparent 80%, rgba(10,10,10,0.85) 100%);
   pointer-events: none;
+}
+
+.section-1 > .container {
+  position: relative;
+  z-index: 10;
 }
 
 .section-2 {
