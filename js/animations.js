@@ -7,14 +7,23 @@ let siteEnabled = false;
 
 document.addEventListener('DOMContentLoaded', () => {
   
-  // Skip animation for reduced motion users only
+  // Skip animation for reduced motion users
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     skipIntroAnimation();
     return;
   }
+
+  // Only run intro animation once per session
+  if (sessionStorage.getItem('hasSeenIntro')) {
+    skipIntroAnimation();
+    return;
+  }
   
-  // Always run opening animation on every page load
+  // Run opening animation
   runIntroAnimation();
+
+  // Mark as seen for this session
+  sessionStorage.setItem('hasSeenIntro', 'true');
   
 });
 
