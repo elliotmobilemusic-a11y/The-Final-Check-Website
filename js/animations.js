@@ -103,6 +103,11 @@ function enableSite() {
   siteEnabled = true;
 
   gsap.killTweensOf('*');
+  
+  // Reset scroll position to absolute top
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  
   gsap.set('body', { overflow: 'auto' });
   
   gsap.set('#main-content', {
