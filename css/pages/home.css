@@ -5,7 +5,7 @@
 
 .narrative-section {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .section-1 {
