@@ -129,6 +129,8 @@ p.lead {
 
 .container-narrow {
   max-width: 1024px;
+  margin-left: 45%;
+  transform: translateX(-50%);
 }
 
 .container-wide {
