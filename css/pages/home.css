@@ -16,7 +16,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 42%;
+  width: 38%;
   height: 100%;
   background-image: url('/assets/images/ChatGPT Image Apr 18, 2026, 12_10_32 PM.png');
   background-position: left center;
@@ -34,8 +34,8 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, transparent 0%, rgba(10,10,10,0.05) 60%, rgba(10,10,10,0.4) 80%, rgba(10,10,10,0.85) 95%, rgba(10,10,10,1) 100%),
-              linear-gradient(180deg, rgba(10,10,10,0.8) 0%, transparent 25%, transparent 75%, rgba(10,10,10,0.8) 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(10,10,10,0.03) 65%, rgba(10,10,10,0.35) 85%, rgba(10,10,10,0.8) 97%, rgba(10,10,10,1) 100%),
+              linear-gradient(180deg, rgba(10,10,10,0.85) 0%, transparent 22%, transparent 78%, rgba(10,10,10,0.85) 100%);
   pointer-events: none;
 }
 
@@ -47,7 +47,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  width: 40%;
+  width: 36%;
   height: 100%;
   background-image: url('/assets/images/ChatGPT Image Apr 18, 2026, 12_11_59 PM.png');
   background-position: right center;
@@ -65,8 +65,8 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(270deg, transparent 0%, rgba(18,18,18,0.05) 60%, rgba(18,18,18,0.4) 80%, rgba(18,18,18,0.85) 95%, rgba(18,18,18,1) 100%),
-              linear-gradient(180deg, rgba(18,18,18,0.8) 0%, transparent 25%, transparent 75%, rgba(18,18,18,0.8) 100%);
+  background: linear-gradient(270deg, transparent 0%, rgba(18,18,18,0.03) 65%, rgba(18,18,18,0.35) 85%, rgba(18,18,18,0.8) 97%, rgba(18,18,18,1) 100%),
+              linear-gradient(180deg, rgba(18,18,18,0.85) 0%, transparent 22%, transparent 78%, rgba(18,18,18,0.85) 100%);
   pointer-events: none;
 }
 
