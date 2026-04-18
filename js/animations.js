@@ -143,13 +143,15 @@ function enableSite() {
     delay: 0.15
   });
 
-  gsap.from('.services-section', {
-    y: 18,
-    opacity: 0,
-    duration: 1.4,
-    ease: 'expo.out',
-    delay: 0.3
-  });
+  if (document.querySelector('.services-section')) {
+    gsap.from('.services-section', {
+      y: 18,
+      opacity: 0,
+      duration: 1.4,
+      ease: 'expo.out',
+      delay: 0.3
+    });
+  }
 
   gsap.from('#site-footer', {
     y: 12,
