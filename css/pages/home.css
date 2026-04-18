@@ -162,13 +162,13 @@ body::before {
 /* Hero Section */
 .hero-section {
   position: relative;
-  min-height: 78vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   background: transparent;
   overflow: visible;
-  padding-top: 12vh;
-  padding-bottom: 8vh;
+  padding-top: 14vh;
+  padding-bottom: 16vh;
   z-index: 2;
 }
 
