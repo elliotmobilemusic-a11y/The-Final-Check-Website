@@ -11,7 +11,7 @@
 /* Rich charcoal base background */
 html,
 body {
-  background-color: #0B0B0E;
+  background-color: #0C0C0F;
   overflow-x: clip;
   max-width: 100%;
   width: 100%;
@@ -19,82 +19,22 @@ body {
   padding: 0;
 }
 
-/* Natural atmospheric depth gradient */
+/* Extremely subtle page depth gradient */
 body::before {
   content: '';
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  height: 500vh;
-  z-index: -2;
-  pointer-events: none;
-  background: 
-    linear-gradient(180deg, 
-      #0F0F13 0%, 
-      #0C0C0F 20%, 
-      #0B0B0E 40%,
-      #0A0A0D 60%,
-      #0C0C0F 80%, 
-      #0E0E12 100%
-    );
-}
-
-/* Soft ambient light accents */
-body > .ambient-glow {
-  position: fixed;
-  border-radius: 50%;
-  pointer-events: none;
+  height: 100%;
   z-index: -1;
-  opacity: 0.04;
-  filter: blur(120px);
-}
-
-.ambient-glow-1 {
-  width: 80vw;
-  height: 80vh;
-  top: 10vh;
-  left: -20vw;
-  background: radial-gradient(circle, rgba(60, 65, 80, 0.8) 0%, transparent 70%);
-}
-
-.ambient-glow-2 {
-  width: 90vw;
-  height: 90vh;
-  top: 120vh;
-  right: -30vw;
-  background: radial-gradient(circle, rgba(55, 60, 75, 0.7) 0%, transparent 70%);
-}
-
-.ambient-glow-3 {
-  width: 70vw;
-  height: 70vh;
-  top: 240vh;
-  left: 10vw;
-  background: radial-gradient(circle, rgba(50, 55, 70, 0.6) 0%, transparent 70%);
-}
-
-/* Premium cinema grain texture */
-body::after {
-  content: '';
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 200%;
-  height: 200%;
-  z-index: -2;
   pointer-events: none;
-  opacity: 0.105;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.38' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  animation: drift 320s linear infinite;
-}
-
-/* Ultra slow natural atmospheric drift */
-@keyframes drift {
-  0% { transform: translate(0, 0); }
-  33% { transform: translate(-3%, -1%); }
-  66% { transform: translate(-1%, -2%); }
-  100% { transform: translate(0, 0); }
+  background: linear-gradient(180deg, 
+    #0E0E12 0%, 
+    #0C0C0F 50%, 
+    #0B0B0E 100%
+  );
+  opacity: 0.6;
 }
 
 /* Viewport clipped atmosphere container */
@@ -112,138 +52,50 @@ body::after {
   height: 100%;
 }
 
-/* Editorial grid lines */
-.editorial-grid {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.025;
-}
-
-.editorial-grid::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(to right, rgba(100, 105, 120, 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(100, 105, 120, 0.15) 1px, transparent 1px);
-  background-size: 120px 120px;
-}
-
 /* ========================================
    ATMOSPHERIC DECORATIVE IMAGERY
    ======================================== */
 
 .atmosphere-left {
   position: absolute;
-  left: -5%;
-  top: 10vh;
-  height: 82vh;
+  left: -6%;
+  top: 12vh;
+  height: 76vh;
   width: auto;
   object-fit: contain;
-  opacity: 0.65;
+  opacity: 0.42;
   pointer-events: none;
-  filter: contrast(0.74) saturate(0.68) brightness(0.72) hue-rotate(4deg);
+  filter: contrast(0.72) saturate(0.65) brightness(0.68) hue-rotate(2deg);
   
   mask-image: 
-    linear-gradient(to right, black 58%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+    linear-gradient(to right, black 45%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
   -webkit-mask-image: 
-    linear-gradient(to right, black 58%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+    linear-gradient(to right, black 45%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
   mask-composite: intersect;
   -webkit-mask-composite: source-in;
-
-  /* Soft ambient glow around image */
-  box-shadow: inset 0 0 200px 80px rgba(11, 11, 14, 0.9);
-}
-
-.atmosphere-left-wrapper {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.atmosphere-left-wrapper::before {
-  content: '';
-  position: absolute;
-  left: -80%;
-  top: -40%;
-  width: 280%;
-  height: 180%;
-  background: radial-gradient(ellipse 35% 35% at 12% 50%, rgba(48, 52, 65, 0.28) 0%, transparent 75%);
-  pointer-events: none;
-  filter: blur(60px);
-}
-
-.atmosphere-left-wrapper::after {
-  content: '';
-  position: absolute;
-  left: -40%;
-  top: -20%;
-  width: 200%;
-  height: 140%;
-  background: radial-gradient(ellipse 45% 45% at 10% 50%, rgba(0, 0, 0, 0.88) 0%, transparent 80%);
-  pointer-events: none;
-  filter: blur(40px);
 }
 
 .atmosphere-right {
   position: absolute;
-  right: -5%;
-  top: 110vh;
-  height: 82vh;
+  right: -6%;
+  top: 114vh;
+  height: 76vh;
   width: auto;
   object-fit: contain;
-  opacity: 0.65;
+  opacity: 0.42;
   pointer-events: none;
-  filter: contrast(0.74) saturate(0.68) brightness(0.72) hue-rotate(4deg);
+  filter: contrast(0.72) saturate(0.65) brightness(0.68) hue-rotate(2deg);
   
   mask-image: 
-    linear-gradient(to left, black 58%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+    linear-gradient(to left, black 45%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
   -webkit-mask-image: 
-    linear-gradient(to left, black 58%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+    linear-gradient(to left, black 45%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
   mask-composite: intersect;
   -webkit-mask-composite: source-in;
-
-  /* Soft ambient glow around image */
-  box-shadow: inset 0 0 200px 80px rgba(11, 11, 14, 0.9);
-}
-
-.atmosphere-right-wrapper {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.atmosphere-right-wrapper::before {
-  content: '';
-  position: absolute;
-  right: -80%;
-  top: -40%;
-  width: 280%;
-  height: 180%;
-  background: radial-gradient(ellipse 35% 35% at 88% 50%, rgba(48, 52, 65, 0.28) 0%, transparent 75%);
-  pointer-events: none;
-  filter: blur(60px);
-}
-
-.atmosphere-right-wrapper::after {
-  content: '';
-  position: absolute;
-  right: -40%;
-  top: -20%;
-  width: 200%;
-  height: 140%;
-  background: radial-gradient(ellipse 45% 45% at 90% 50%, rgba(0, 0, 0, 0.88) 0%, transparent 80%);
-  pointer-events: none;
-  filter: blur(40px);
 }
 
 /* ========================================
@@ -253,12 +105,12 @@ body::after {
 /* Hero Section */
 .section-1 {
   position: relative;
-  min-height: 90vh;
+  min-height: 78vh;
   display: flex;
   align-items: center;
   background: transparent;
   overflow: visible;
-  padding-top: 8vh;
+  padding-top: 6vh;
   z-index: 2;
 }
 
@@ -299,13 +151,11 @@ body::after {
   background: transparent;
   position: relative;
   z-index: 2;
-  padding: var(--space-3xl) 0;
+  padding: var(--space-2xl) 0;
 }
 
 .section-2 {
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
+  padding: var(--space-3xl) 0;
 }
 
 .section-2 .credibility-intro {
@@ -331,7 +181,7 @@ body::after {
 }
 
 .section-3 {
-  padding: var(--space-4xl) 0;
+  padding: var(--space-3xl) 0;
 }
 
 .section-title {
@@ -404,9 +254,10 @@ body::after {
 
 /* Standard Content Section */
 .standard-section {
-  background-color: #131318;
+  background: transparent;
   position: relative;
   z-index: 3;
+  padding: var(--space-3xl) 0;
 }
 
 /* ========================================
@@ -446,9 +297,9 @@ body::after {
 
 /* Footer */
 #site-footer {
-  padding: var(--space-2xl) 0;
-  background-color: #0E0E11;
-  border-top: 1px solid #212128;
+  padding: var(--space-xl) 0;
+  background: transparent;
+  border-top: 1px solid rgba(120, 125, 140, 0.12);
   position: relative;
   z-index: 3;
 }
