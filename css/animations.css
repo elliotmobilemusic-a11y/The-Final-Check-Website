@@ -137,3 +137,14 @@
 .section-title {
   margin-bottom: var(--space-xl);
 }
+
+/* Page Transition Overlay */
+.page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #0C0C0F;
+  z-index: 99998;
+  opacity: 0;
+  pointer-events: none;
+  will-change: opacity;
+}

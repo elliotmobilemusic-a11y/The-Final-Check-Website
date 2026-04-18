@@ -158,4 +158,55 @@ function enableSite() {
     ease: 'expo.out',
     delay: 0.45
   });
+  
+  // Subtle parallax on atmospheric background images
+  window.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 12;
+    const y = (e.clientY / window.innerHeight - 0.5) * 8;
+    
+    gsap.to('.atmosphere-left', {
+      x: x * 0.4,
+      y: y * 0.3,
+      duration: 1.8,
+      ease: 'power2.out'
+    });
+    
+    gsap.to('.atmosphere-right', {
+      x: x * -0.4,
+      y: y * -0.3,
+      duration: 1.8,
+      ease: 'power2.out'
+    });
+  });
+
+  // Micro hover effect on all cards
+  document.querySelectorAll('.value-card, .service-card, .summary-item').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card, {
+        y: -3,
+        duration: 0.35,
+        ease: 'power2.out'
+      });
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card, {
+        y: 0,
+        duration: 0.45,
+        ease: 'power2.out'
+      });
+    });
+  });
+
+  // Hide scroll indicator when user scrolls
+  let scrollIndicator = document.querySelector('.scroll-indicator');
+  if (scrollIndicator) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        scrollIndicator.classList.add('hidden');
+      } else {
+        scrollIndicator.classList.remove('hidden');
+      }
+    }, { passive: true });
+  }
 }
