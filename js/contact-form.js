@@ -198,6 +198,64 @@ document.addEventListener('DOMContentLoaded', function() {
     /**
      * Form Submit Handler
      */
+    /**
+     * Add Another Site Functionality
+     */
+    let siteCount = 1;
+    const addSiteButton = document.getElementById('add-site-button');
+    const siteFieldsContainer = document.getElementById('site-fields-container');
+
+    function createNewSiteEntry() {
+        siteCount++;
+        const siteId = `site-${siteCount}`;
+
+        const siteEntry = document.createElement('div');
+        siteEntry.className = 'site-entry';
+        siteEntry.dataset.siteId = siteId;
+
+        siteEntry.innerHTML = `
+            <div class="form-divider" style="margin: var(--space-lg) 0;"></div>
+            
+            <div class="form-group">
+                <label for="${siteId}-name">Site Name</label>
+                <input type="text" id="${siteId}-name" name="siteName" autocomplete="organization" />
+            </div>
+
+            <div class="form-group">
+                <label for="${siteId}-address">Site Address</label>
+                <textarea id="${siteId}-address" name="siteAddress" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="${siteId}-website">Site Website</label>
+                <input type="url" id="${siteId}-website" name="siteWebsite" autocomplete="url" placeholder="https://" />
+            </div>
+
+            <input type="hidden" id="${siteId}-status" name="siteStatus" value="Active" />
+        `;
+
+        siteFieldsContainer.appendChild(siteEntry);
+        
+        gsap.fromTo(siteEntry, {
+            opacity: 0,
+            y: 10,
+            height: 0
+        }, {
+            opacity: 1,
+            y: 0,
+            height: 'auto',
+            duration: 0.5,
+            ease: 'expo.out'
+        });
+    }
+
+    if (addSiteButton) {
+        addSiteButton.addEventListener('click', createNewSiteEntry);
+    }
+
+    /**
+     * Form Submit Handler
+     */
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
