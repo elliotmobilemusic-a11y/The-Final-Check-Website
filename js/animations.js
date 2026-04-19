@@ -159,6 +159,14 @@
       header.classList.add("active");
     }
 
+    gsap.to(mainContent, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "expo.out",
+      clearProps: "transform",
+    });
+
     animateHeroContent();
     setupParallax();
     setupCardHoverEffects();
