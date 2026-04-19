@@ -23,7 +23,14 @@
       return;
     }
 
-    runIntroAnimation();
+    // Only run full intro animation on initial site load
+    if (!sessionStorage.getItem('siteVisited')) {
+      runIntroAnimation();
+      sessionStorage.setItem('siteVisited', 'true');
+    } else {
+      // Subsequent page loads use elegant fast fade transition
+      runSubtlePageTransition();
+    }
   }
 
   function runIntroAnimation() {
@@ -111,6 +118,34 @@
     }, "-=0.15");
   }
 
+  function runSubtlePageTransition() {
+    const overlay = document.getElementById("intro-overlay");
+    const header = document.getElementById("site-header");
+    const mainContent = document.getElementById("main-content");
+
+    gsap.set(mainContent, {
+      opacity: 0,
+      y: 12,
+    });
+
+    gsap.to(mainContent, {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      ease: "expo.out",
+      clearProps: "transform",
+      delay: 0.1,
+    });
+
+    if (header) {
+      header.classList.add("active");
+    }
+
+    setTimeout(() => {
+      revealSite();
+    }, 200);
+  }
+
   function revealSite() {
     if (siteEnabled) return;
     siteEnabled = true;
@@ -123,14 +158,6 @@
     if (header) {
       header.classList.add("active");
     }
-
-    gsap.to(mainContent, {
-      opacity: 1,
-      y: 0,
-      duration: 1.0,
-      ease: "expo.out",
-      clearProps: "transform",
-    });
 
     animateHeroContent();
     setupParallax();
