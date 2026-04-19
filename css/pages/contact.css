@@ -234,3 +234,16 @@
     gap: var(--space-md);
   }
 }
+
+/* Button Loading State */
+.client-intake-form .btn .btn-loading-text {
+  display: none;
+}
+
+.client-intake-form .btn.loading .btn-normal-text {
+  display: none;
+}
+
+.client-intake-form .btn.loading .btn-loading-text {
+  display: inline-block;
+}
