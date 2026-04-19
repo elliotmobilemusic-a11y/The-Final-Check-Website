@@ -38,26 +38,28 @@
   pointer-events: none;
   z-index: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-top: 10vh;
 }
 
 .contact-hero-image {
   width: auto;
-  height: 85vh;
-  max-width: 90%;
+  height: auto;
+  max-height: 92vh;
+  max-width: 100%;
   object-fit: contain;
-  object-position: center center;
-  opacity: 0.68;
+  object-position: center top;
+  opacity: 0.62;
   
-  filter: contrast(1.05) saturate(1.12) brightness(0.85);
+  filter: contrast(1.08) saturate(1.15) brightness(0.88);
   
   mask-image: 
-    radial-gradient(ellipse at center, black 40%, transparent 75%),
-    linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    radial-gradient(ellipse at 50% 0%, black 55%, transparent 85%),
+    linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
   -webkit-mask-image: 
-    radial-gradient(ellipse at center, black 40%, transparent 75%),
-    linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    radial-gradient(ellipse at 50% 0%, black 55%, transparent 85%),
+    linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
   mask-composite: intersect;
   -webkit-mask-composite: source-in;
 }
