@@ -190,9 +190,15 @@ body::before {
   align-items: center;
   background: transparent;
   overflow: visible;
-  padding-top: 12vh;
+  padding-top: 18vh;
   padding-bottom: 14vh;
   z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 22vh;
+  }
 }
 
 /* Hero Content */
