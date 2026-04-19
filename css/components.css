@@ -41,6 +41,31 @@
   list-style: none;
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    gap: var(--space-md);
+  }
+  
+  .nav-brand {
+    font-size: 0.85rem;
+  }
+  
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: var(--space-sm);
+  }
+  
+  .navbar {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+}
+
 .nav-links a {
   font-size: 0.9375rem;
   color: var(--color-light);

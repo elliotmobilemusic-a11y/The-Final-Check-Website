@@ -100,6 +100,29 @@ body::before {
   -webkit-mask-composite: source-in;
 }
 
+@media (max-width: 768px) {
+  .atmosphere-left,
+  .atmosphere-right {
+    opacity: 0.35;
+    max-height: 60vh;
+  }
+  
+  .atmosphere-left {
+    left: -18%;
+  }
+  
+  .atmosphere-right {
+    right: -18%;
+  }
+}
+
+@media (max-width: 480px) {
+  .atmosphere-left,
+  .atmosphere-right {
+    opacity: 0.22;
+  }
+}
+
 .atmosphere-left-wrapper::after {
   content: '';
   position: absolute;

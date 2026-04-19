@@ -145,6 +145,62 @@ p.lead {
   z-index: 10;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-md);
+  }
+  
+  .container-narrow {
+    padding: 0 var(--space-md);
+  }
+  
+  h1 {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  p.lead {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --space-xl: 2rem;
+    --space-2xl: 2.5rem;
+    --space-3xl: 3.5rem;
+  }
+  
+  .container {
+    padding: 0 var(--space-sm);
+  }
+  
+  .container-narrow {
+    padding: 0 var(--space-sm);
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
 .container-wide {
   max-width: 1440px;
 }
