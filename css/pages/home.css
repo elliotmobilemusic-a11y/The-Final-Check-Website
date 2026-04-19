@@ -197,7 +197,13 @@ body::before {
 
 @media (max-width: 768px) {
   .hero-section {
-    padding-top: 22vh;
+    padding-top: 28vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding-top: 30vh;
   }
 }
 
