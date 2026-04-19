@@ -1,262 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | The Final Check Hospitality Consultancy</title>
-    
-    <script>document.documentElement.classList.add('js');</script>
-    
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/pages/home.css">
-    <link rel="stylesheet" href="css/pages/contact.css">
-    
-    <meta name="description" content="Contact The Final Check for hospitality consultancy, operational audits, menu development and support.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <title>Contact | The Final Check Hospitality Consultancy</title>
+  <meta
+    name="description"
+    content="Contact The Final Check for hospitality consultancy, operational audits, menu development and support."
+  />
+  <meta name="theme-color" content="#0C0C0F" />
+
+  <script>
+    document.documentElement.classList.add('js');
+  </script>
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages/home.css" />
+  <link rel="stylesheet" href="css/pages/contact.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png" />
 </head>
 <body>
-    
-    <!-- Opening Animation Sequence -->
-    <div id="intro-overlay">
-        <div class="intro-container">
-            <div class="intro-divider"></div>
-            <h1 class="intro-logo">THE FINAL CHECK</h1>
-            <div class="intro-tagline">Hospitality Performance Consultancy</div>
-        </div>
+  <!-- Opening Animation Sequence -->
+  <div id="intro-overlay" aria-hidden="true">
+    <div class="intro-container">
+      <div class="intro-divider"></div>
+      <p class="intro-logo">THE FINAL CHECK</p>
+      <div class="intro-tagline">Hospitality Performance Consultancy</div>
     </div>
-    
-    <!-- Main Content -->
-    <main id="main-content">
+  </div>
 
-        <!-- Decorative Atmospheric Imagery -->
-        <div class="atmosphere-wrapper">
-            <div class="home-atmosphere">
-                <div class="atmosphere-left-wrapper">
-                    <img src="assets/images/hero-left-3.png" alt="" class="atmosphere-left">
-                </div>
-                <div class="atmosphere-right-wrapper">
-                    <img src="assets/images/hero-right-3.png" alt="" class="atmosphere-right">
-                </div>
-            </div>
+  <!-- Site Header -->
+  <header id="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Primary">
+        <a href="/" class="nav-brand" aria-label="The Final Check home">
+          THE FINAL CHECK
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/contact.html" aria-current="page" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Decorative Atmospheric Imagery -->
+    <div class="atmosphere-wrapper" aria-hidden="true">
+      <div class="home-atmosphere">
+        <div class="atmosphere-left-wrapper">
+          <img
+            src="assets/images/hero-left-3.png"
+            alt=""
+            class="atmosphere-left"
+            loading="eager"
+            decoding="async"
+          />
         </div>
-        
-        <!-- Navigation -->
-        <header id="site-header">
-            <div class="container">
-                <nav class="navbar">
-                    <div class="nav-brand">THE FINAL CHECK</div>
-                    <ul class="nav-links">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about.html">About</a></li>
-                        <li><a href="/services.html">Services</a></li>
-                        <li><a href="/contact.html" class="active">Contact</a></li>
-                    </ul>
-                </nav>
+
+        <div class="atmosphere-right-wrapper">
+          <img
+            src="assets/images/hero-right-3.png"
+            alt=""
+            class="atmosphere-right"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Hero Section -->
+    <section class="narrative-section hero-section" aria-labelledby="contact-title">
+      <div class="container container-narrow text-center">
+        <p class="hero-eyebrow">CONTACT</p>
+        <h1 id="contact-title">Practical hospitality support</h1>
+        <p class="lead">
+          Get in touch to discuss operational support, audits, training, menu
+          development or any other hospitality requirements.
+        </p>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <span class="scroll-text">Scroll</span>
+        <div class="scroll-dot"></div>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="standard-section contact-form-section" aria-labelledby="enquiry-title">
+      <div class="container">
+        <h2 id="enquiry-title" class="section-title">New Enquiry</h2>
+
+        <div class="contact-form-container">
+          <form id="client-intake-form" class="client-intake-form">
+            <div
+              class="form-success-message"
+              style="display: none;"
+              role="status"
+              aria-live="polite"
+            >
+              <div class="success-icon">✓</div>
+              <h3>Enquiry submitted successfully</h3>
+              <p>
+                Thank you. Your enquiry has been received. Jason will be in touch
+                with you shortly.
+              </p>
             </div>
-        </header>
-        
-        <!-- Contact Hero Section -->
-        <section class="narrative-section hero-section">
-            <div class="container container-narrow text-center">
-                <p class="hero-eyebrow">CONTACT</p>
-                <h2>Practical hospitality support</h2>
-                <p class="lead">Get in touch to discuss operational support, audits, training, menu development or any other hospitality requirements.</p>
+
+            <div
+              class="form-error-message"
+              style="display: none;"
+              role="alert"
+              aria-live="assertive"
+            >
+              <div class="error-icon">⚠</div>
+              <h3>There was a problem submitting your enquiry</h3>
+              <p>Please try again or contact us directly by email.</p>
             </div>
-            
-            <div class="scroll-indicator">
-                <span class="scroll-text">Scroll</span>
-                <div class="scroll-dot"></div>
-                <div class="scroll-line"></div>
-            </div>
-            
-        </section>
 
-        <!-- Contact Form Section -->
-        <section class="standard-section contact-form-section">
-            <div class="container">
-                <h2 class="section-title">New Enquiry</h2>
+            <div class="form-fields">
+              <div class="form-group">
+                <label for="businessName">
+                  Business / Company Name <span class="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="businessName"
+                  name="businessName"
+                  autocomplete="organization"
+                  required
+                />
+                <div class="form-error-text"></div>
+              </div>
 
-                <div class="contact-form-container">
-                    
-                    <form id="client-intake-form" class="client-intake-form">
-                        
-                        <!-- Form Configuration -->
-                        <script>
-                            window.CLIENT_INTAKE_CONFIG = {
-                                TOKEN: '18ddc864d97f4ae2bb9456523016b350',
-                                APP_BASE_URL: 'https://portal.thefinalcheck.uk',
-                                INTAKE_ENDPOINT: '/contact',
-                                SUBMIT_ENDPOINT: '/api/client-intake-submit'
-                            };
-                        </script>
-
-                        <div class="form-success-message" style="display: none;">
-                            <div class="success-icon">✓</div>
-                            <h3>Enquiry submitted successfully</h3>
-                            <p>Thank you. Your enquiry has been received. Jason will be in touch with you shortly.</p>
-                        </div>
-
-                        <div class="form-error-message" style="display: none;">
-                            <div class="error-icon">⚠</div>
-                            <h3>There was a problem submitting your enquiry</h3>
-                            <p>Please try again or contact us directly by email.</p>
-                        </div>
-
-                        <div class="form-fields">
-
-                            <div class="form-group">
-                                <label for="businessName">Business / Company Name <span class="required">*</span></label>
-                                <input type="text" id="businessName" name="businessName" required>
-                                <div class="form-error-text"></div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="contactName">Contact Name</label>
-                                    <input type="text" id="contactName" name="contactName">
-                                </div>
-                                <div class="form-group">
-                                    <label for="contactRole">Role</label>
-                                    <input type="text" id="contactRole" name="contactRole">
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="contactEmail">Email Address <span class="required">*</span></label>
-                                    <input type="email" id="contactEmail" name="contactEmail" required>
-                                    <div class="form-error-text"></div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="contactPhone">Phone Number</label>
-                                    <input type="tel" id="contactPhone" name="contactPhone">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="preferredContactMethod">Preferred Contact Method</label>
-                                <select id="preferredContactMethod" name="preferredContactMethod">
-                                    <option value="">Please select</option>
-                                    <option value="email">Email</option>
-                                    <option value="phone">Phone</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="website">Website</label>
-                                <input type="url" id="website" name="website" placeholder="https://">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="headOfficeAddress">Head Office Address</label>
-                                <textarea id="headOfficeAddress" name="headOfficeAddress" rows="3"></textarea>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="businessType">Business Type</label>
-                                    <select id="businessType" name="businessType">
-                                        <option value="">Please select</option>
-                                        <option value="restaurant">Restaurant</option>
-                                        <option value="pub">Pub / Gastro Pub</option>
-                                        <option value="hotel">Hotel</option>
-                                        <option value="farmshop">Farm Shop / Deli</option>
-                                        <option value="cafe">Cafe / Coffee Shop</option>
-                                        <option value="bakery">Bakery</option>
-                                        <option value="group">Group / Multi Site</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="weeklySalesBand">Approximate Weekly Sales</label>
-                                    <select id="weeklySalesBand" name="weeklySalesBand">
-                                        <option value="">Please select</option>
-                                        <option value="under-5k">Under £5,000</option>
-                                        <option value="5k-10k">£5,000 - £10,000</option>
-                                        <option value="10k-20k">£10,000 - £20,000</option>
-                                        <option value="20k-40k">£20,000 - £40,000</option>
-                                        <option value="over-40k">Over £40,000</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="challenges">What challenges are you currently facing?</label>
-                                <textarea id="challenges" name="challenges" rows="4"></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="supportNeeded">What support are you looking for?</label>
-                                <textarea id="supportNeeded" name="supportNeeded" rows="4"></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="extraNotes">Additional Notes</label>
-                                <textarea id="extraNotes" name="extraNotes" rows="3"></textarea>
-                            </div>
-
-                            <div class="form-divider"></div>
-
-                            <h3 class="form-section-title">Site Details</h3>
-                            <p class="form-section-description">Please provide details of at least one site</p>
-
-                            <div id="site-fields-container">
-                                <div class="site-entry" data-site-id="site-1">
-                                    
-                                    <div class="form-group">
-                                        <label for="site-1-name">Site Name</label>
-                                        <input type="text" id="site-1-name" name="siteName">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="site-1-address">Site Address</label>
-                                        <textarea id="site-1-address" name="siteAddress" rows="3"></textarea>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="site-1-website">Site Website</label>
-                                        <input type="url" id="site-1-website" name="siteWebsite" placeholder="https://">
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="form-submit-container">
-                                <button type="submit" class="btn btn-primary btn-full-width">
-                                    <span class="btn-normal-text">Submit Enquiry</span>
-                                    <span class="btn-loading-text">Sending...</span>
-                                </button>
-                            </div>
-
-                        </div>
-
-                    </form>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName">Contact Name</label>
+                  <input
+                    type="text"
+                    id="contactName"
+                    name="contactName"
+                    autocomplete="name"
+                  />
                 </div>
 
-            </div>
-        </section>
-        
-        <footer id="site-footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-brand">THE FINAL CHECK</div>
-                    <p>Premium Hospitality Consultancy</p>
-                    <p>&copy; 2026 The Final Check. All rights reserved.</p>
+                <div class="form-group">
+                  <label for="contactRole">Role</label>
+                  <input
+                    type="text"
+                    id="contactRole"
+                    name="contactRole"
+                    autocomplete="organization-title"
+                  />
                 </div>
-            </div>
-        </footer>
-        
-    </main>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/contact-form.js"></script>
+              </div>
 
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactEmail">
+                    Email Address <span class="required">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    name="contactEmail"
+                    autocomplete="email"
+                    required
+                  />
+                  <div class="form-error-text"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactPhone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="contactPhone"
+                    name="contactPhone"
+                    autocomplete="tel"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="preferredContactMethod">Preferred Contact Method</label>
+                <select id="preferredContactMethod" name="preferredContactMethod">
+                  <option value="">Please select</option>
+                  <option value="Email">Email</option>
+                  <option value="Phone">Phone</option>
+                  <option value="Either">Either</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="website">Website</label>
+                <input
+                  type="url"
+                  id="website"
+                  name="website"
+                  autocomplete="url"
+                  placeholder="https://"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="headOfficeAddress">Head Office Address</label>
+                <textarea
+                  id="headOfficeAddress"
+                  name="headOfficeAddress"
+                  rows="3"
+                  autocomplete="street-address"
+                ></textarea>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="businessType">Business Type</label>
+                  <select id="businessType" name="businessType">
+                    <option value="">Please select</option>
+                    <option value="Restaurant">Restaurant</option>
+                    <option value="Pub / Gastro Pub">Pub / Gastro Pub</option>
+                    <option value="Hotel">Hotel</option>
+                    <option value="Farm Shop / Deli">Farm Shop / Deli</option>
+                    <option value="Cafe / Coffee Shop">Cafe / Coffee Shop</option>
+                    <option value="Bakery">Bakery</option>
+                    <option value="Group / Multi Site">Group / Multi Site</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="weeklySalesBand">Approximate Weekly Sales</label>
+                  <select id="weeklySalesBand" name="weeklySalesBand">
+                    <option value="">Please select</option>
+                    <option value="Under £5,000">Under £5,000</option>
+                    <option value="£5,000 - £10,000">£5,000 - £10,000</option>
+                    <option value="£10,000 - £20,000">£10,000 - £20,000</option>
+                    <option value="£20,000 - £40,000">£20,000 - £40,000</option>
+                    <option value="Over £40,000">Over £40,000</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="challenges">What challenges are you currently facing?</label>
+                <textarea id="challenges" name="challenges" rows="4"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="supportNeeded">What support are you looking for?</label>
+                <textarea id="supportNeeded" name="supportNeeded" rows="4"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="extraNotes">Additional Notes</label>
+                <textarea id="extraNotes" name="extraNotes" rows="3"></textarea>
+              </div>
+
+              <div class="form-divider" aria-hidden="true"></div>
+
+              <h3 class="form-section-title">Site Details</h3>
+              <p class="form-section-description">
+                Please provide details of at least one site
+              </p>
+
+              <div id="site-fields-container">
+                <div class="site-entry" data-site-id="site-1">
+                  <div class="form-group">
+                    <label for="site-1-name">Site Name</label>
+                    <input
+                      type="text"
+                      id="site-1-name"
+                      name="siteName"
+                      autocomplete="organization"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="site-1-address">Site Address</label>
+                    <textarea
+                      id="site-1-address"
+                      name="siteAddress"
+                      rows="3"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="site-1-website">Site Website</label>
+                    <input
+                      type="url"
+                      id="site-1-website"
+                      name="siteWebsite"
+                      autocomplete="url"
+                      placeholder="https://"
+                    />
+                  </div>
+
+                  <input
+                    type="hidden"
+                    id="site-1-status"
+                    name="siteStatus"
+                    value="Active"
+                  />
+                </div>
+              </div>
+
+              <div class="form-submit-container">
+                <button type="submit" class="btn btn-primary btn-full-width">
+                  <span class="btn-normal-text">Submit Enquiry</span>
+                  <span class="btn-loading-text">Sending...</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">THE FINAL CHECK</div>
+          <p>Premium Hospitality Consultancy</p>
+          <p>&copy; 2026 The Final Check. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    window.CLIENT_INTAKE_CONFIG = Object.freeze({
+      TOKEN: '18ddc864d97f4ae2bb9456523016b350',
+      APP_BASE_URL: 'https://portal.thefinalcheck.uk',
+      INTAKE_ENDPOINT: '/contact',
+      SUBMIT_ENDPOINT: '/api/client-intake-submit'
+    });
+  </script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    defer
+  ></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/contact-form.js" defer></script>
 </body>
 </html>
