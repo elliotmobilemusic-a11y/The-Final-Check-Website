@@ -1,32 +1,46 @@
-/* # Reset & Base Styles
-/* 
-*/
+/**
+ * Global Styles
+ * The Final Check
+ * Base reset, tokens, typography and layout
+ */
 
-/* CSS Reset */
-*, *::before, *::after {
+/* ========================================
+   CSS RESET
+   ======================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* Root Variables - Premium Brand Palette */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* ========================================
+   ROOT VARIABLES
+   ======================================== */
+
 :root {
-  /* Neutral Palette */
-  --color-black: #0A0A0A;
+  /* Neutral palette */
+  --color-black: #0a0a0a;
   --color-dark: #121212;
-  --color-medium: #2A2A2A;
-  --color-muted: #6B6B6B;
-  --color-light: #A3A3A3;
-  --color-white: #FAFAFA;
-  
-  /* Accent Colors - Premium Hospitality Palette */
-  --color-primary: #A88F5E;
-  --color-primary-light: #BFAA7A;
-  --color-primary-dark: #8A7449;
-  --color-warm-dark: #1A1712;
+  --color-medium: #2a2a2a;
+  --color-muted: #6b6b6b;
+  --color-light: #a3a3a3;
+  --color-white: #fafafa;
+
+  /* Accent palette */
+  --color-primary: #a88f5e;
+  --color-primary-light: #bfaa7a;
+  --color-primary-dark: #8a7449;
+  --color-warm-dark: #1a1712;
   --color-warm-medium: #242019;
-  
-  /* Spacing System */
+
+  /* Spacing */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
@@ -34,75 +48,122 @@
   --space-xl: 3rem;
   --space-2xl: 4rem;
   --space-3xl: 6rem;
-  
+
   /* Typography */
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  
-  /* Animation */
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+
+  /* Motion */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  
-  /* Border Radius */
+
+  /* Radius */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 24px;
 }
 
+/* ========================================
+   BASE DOCUMENT
+   ======================================== */
+
 html {
   font-size: 16px;
+  background-color: var(--color-black);
   scroll-behavior: smooth;
-  background-color: #0A0A0A;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   background-color: var(--color-black);
   color: var(--color-white);
+  font-family: var(--font-sans);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
+}
+
+/* ========================================
+   MEDIA / EMBEDS
+   ======================================== */
+
+img,
+picture,
+svg,
+canvas,
+video {
+  display: block;
+  max-width: 100%;
 }
 
 img {
-  max-width: 100%;
-  display: block;
+  height: auto;
 }
+
+/* ========================================
+   INTERACTIVE ELEMENTS
+   ======================================== */
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-button {
+button,
+input,
+textarea,
+select {
   font: inherit;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: inherit;
 }
 
-/* Typography Hierarchy */
-h1, h2, h3, h4 {
+button {
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(168, 143, 94, 0.65);
+  outline-offset: 3px;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: var(--space-md);
   font-weight: 600;
   line-height: 1.1;
-  margin-bottom: var(--space-md);
+  color: var(--color-white);
 }
 
 h1 {
-  font-size: clamp(2.5rem);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
 h2 {
+  margin-bottom: var(--space-lg);
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 500;
   letter-spacing: -0.015em;
-  margin-bottom: var(--space-lg);
 }
 
 h3 {
@@ -118,61 +179,73 @@ p {
 }
 
 p.lead {
-  font-size: 1.25rem;
-  line-height: 1.65;
-  font-weight: 300;
-  letter-spacing: 0.005em;
   max-width: 62ch;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   color: var(--color-light);
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.65;
+  letter-spacing: 0.005em;
 }
 
-/* Container System */
-.container {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 var(--space-lg);
+/* ========================================
+   LAYOUT CONTAINERS
+   ======================================== */
+
+.container,
+.container-narrow,
+.container-wide {
   position: relative;
+  width: 100%;
+  margin: 0 auto;
   z-index: 10;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 var(--space-lg);
 }
 
 .container-narrow {
   max-width: 1024px;
-  margin: 0 auto;
   padding: 0 var(--space-xl);
-  position: relative;
-  z-index: 10;
 }
 
+.container-wide {
+  max-width: 1440px;
+  padding: 0 var(--space-lg);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
 @media (max-width: 768px) {
-  .container {
+  .container,
+  .container-narrow,
+  .container-wide {
     padding: 0 var(--space-md);
   }
-  
-  .container-narrow {
-    padding: 0 var(--space-md);
-  }
-  
+
   h1 {
     font-size: 2rem;
     line-height: 1.15;
   }
-  
+
   h2 {
     font-size: 1.6rem;
     line-height: 1.2;
   }
-  
+
   h3 {
     font-size: 1.25rem;
   }
-  
+
   p {
     font-size: 1rem;
   }
-  
+
   p.lead {
     font-size: 1.1rem;
   }
@@ -184,33 +257,37 @@ p.lead {
     --space-2xl: 2.5rem;
     --space-3xl: 3.5rem;
   }
-  
-  .container {
+
+  .container,
+  .container-narrow,
+  .container-wide {
     padding: 0 var(--space-sm);
   }
-  
-  .container-narrow {
-    padding: 0 var(--space-sm);
-  }
-  
+
   h1 {
     font-size: 1.75rem;
   }
-  
+
   h2 {
     font-size: 1.4rem;
   }
 }
 
-.container-wide {
-  max-width: 1440px;
-}
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
 
-/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

@@ -1,21 +1,30 @@
 /**
  * Shared UI Components
+ * The Final Check
+ * Refined base components
  */
 
-/* Navigation */
+/* ========================================
+   NAVIGATION
+   ======================================== */
+
 #site-header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 1000;
+  width: 100%;
   padding: var(--space-md) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(12px);
   transform: translateY(-100%);
   opacity: 0;
-  transition: all 0.6s var(--ease-out-expo);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition:
+    transform 0.6s var(--ease-out-expo),
+    opacity 0.6s var(--ease-out-expo),
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 #site-header.active {
@@ -25,109 +34,181 @@
 
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
 }
 
 .nav-brand {
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-white);
   font-size: 0.9375rem;
+  font-weight: 600;
   letter-spacing: 0.05em;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-lg);
+  align-items: center;
   list-style: none;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    gap: var(--space-md);
-  }
-  
-  .nav-brand {
-    font-size: 0.85rem;
-  }
-  
-  .nav-links a {
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-links {
-    gap: var(--space-sm);
-  }
-  
-  .navbar {
-    flex-direction: column;
-    gap: var(--space-sm);
-  }
-}
-
 .nav-links a {
-  font-size: 0.9375rem;
-  color: var(--color-light);
-  transition: color 0.2s ease;
   position: relative;
+  color: var(--color-light);
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  transition: color 0.22s ease, opacity 0.22s ease;
 }
 
 .nav-links a:hover,
+.nav-links a:focus-visible,
 .nav-links a.active {
   color: var(--color-white);
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
   width: 0;
   height: 1px;
   background-color: var(--color-primary);
-  transition: width 0.3s ease;
+  transition: width 0.28s var(--ease-out-expo);
 }
 
 .nav-links a:hover::after,
+.nav-links a:focus-visible::after,
 .nav-links a.active::after {
   width: 100%;
 }
 
-/* Service Cards */
+.nav-links a:focus-visible,
+.nav-brand:focus-visible {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  #site-header {
+    padding: var(--space-sm) 0;
+  }
+
+  .nav-links {
+    gap: var(--space-md);
+  }
+
+  .nav-brand,
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: var(--space-sm);
+  }
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.9rem 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  color: var(--color-white);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  transition:
+    transform 0.25s var(--ease-out-expo),
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(168, 143, 94, 0.45);
+}
+
+.btn-primary {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   SERVICE CARD BASE
+   ======================================== */
+
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: var(--space-lg);
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.02);
+  padding: var(--space-xl);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-lg);
-  padding: var(--space-xl);
-  transition: all 0.4s var(--ease-out-expo);
+  background: rgba(255, 255, 255, 0.02);
+  transition:
+    transform 0.3s var(--ease-out-expo),
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.12);
   transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
 }
 
 .service-card h3 {
-  font-size: 1.25rem;
   margin-bottom: var(--space-sm);
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
 .service-card p {
-  font-size: 0.9375rem;
   margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
 }
 
-/* Footer */
+/* ========================================
+   FOOTER
+   ======================================== */
+
 #site-footer {
+  position: relative;
+  z-index: 3;
   margin-top: var(--space-3xl);
   padding: var(--space-2xl) 0 var(--space-xl);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -138,19 +219,25 @@
 }
 
 .footer-brand {
-  font-size: 1.25rem;
-  font-weight: 600;
   margin-bottom: var(--space-sm);
-  letter-spacing: 0.05em;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 #site-footer p {
-  font-size: 0.875rem;
   margin-bottom: var(--space-xs);
-  opacity: 0.7;
+  font-size: 0.875rem;
+  opacity: 0.72;
 }
 
-/* Standard Sections */
+/* ========================================
+   STANDARD SECTION BASE
+   ======================================== */
+
 .standard-section {
+  position: relative;
+  z-index: 2;
   padding: var(--space-3xl) 0;
 }

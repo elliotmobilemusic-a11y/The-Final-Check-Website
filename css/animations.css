@@ -1,150 +1,206 @@
 /**
- * Opening Animation Styles
- * Premium Hospitality Brand Reveal
+ * Animations Styles
+ * The Final Check
+ * Refined version
  */
+
+/* ========================================
+   INTRO OVERLAY
+   ======================================== */
 
 #intro-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--color-black);
+  inset: 0;
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-black);
   opacity: 0;
   pointer-events: none;
-  overflow: hidden;
+  will-change: opacity;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 #intro-overlay::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(ellipse at 30% 20%, rgba(168, 143, 94, 0.06) 0%, transparent 50%),
-              radial-gradient(ellipse at 70% 80%, rgba(40, 40, 40, 0.15) 0%, transparent 45%);
+  background:
+    radial-gradient(
+      ellipse at 30% 20%,
+      rgba(168, 143, 94, 0.06) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 70% 80%,
+      rgba(40, 40, 40, 0.15) 0%,
+      transparent 45%
+    );
   animation: introBackgroundFlow 22s ease-in-out infinite alternate;
   will-change: transform;
+  transform: translateZ(0);
 }
 
 @keyframes introBackgroundFlow {
   0% {
-    transform: translate(0, 0) rotate(0deg);
+    transform: translate3d(0, 0, 0) rotate(0deg);
   }
   33% {
-    transform: translate(-3%, 2%) rotate(1deg);
+    transform: translate3d(-3%, 2%, 0) rotate(1deg);
   }
   66% {
-    transform: translate(2%, -1%) rotate(-1deg);
+    transform: translate3d(2%, -1%, 0) rotate(-1deg);
   }
   100% {
-    transform: translate(0, 0) rotate(0deg);
+    transform: translate3d(0, 0, 0) rotate(0deg);
   }
 }
 
 .intro-container {
+  position: relative;
+  z-index: 1;
   text-align: center;
   transform-origin: center;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+.intro-divider,
+.intro-logo,
+.intro-tagline {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .intro-divider {
   width: 230px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(250, 250, 250, 0.7), transparent);
-  margin: 0 auto 2.75rem auto;
+  margin: 0 auto 2.75rem;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(250, 250, 250, 0.7),
+    transparent
+  );
   transform-origin: center;
 }
 
 .intro-logo {
-  font-size: 2.55rem;
-  font-weight: 300;
-  letter-spacing: 0.38em;
   margin: 0;
   color: var(--color-white);
+  font-size: 2.55rem;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: 0.38em;
   text-transform: uppercase;
   font-feature-settings: "cpsp" 1;
-  line-height: 1.4;
 }
 
 .intro-tagline {
   margin-top: 1.75rem;
+  color: var(--color-primary);
   font-size: 0.78rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--color-primary);
   opacity: 0;
   transform: translateY(8px);
 }
 
-/* Content visible by default for no-JS fallback */
+/* ========================================
+   MAIN CONTENT HANDOFF
+   ======================================== */
+
 #main-content {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 .js #main-content {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(24px);
+  will-change: transform, opacity;
 }
 
-#site-header.active {
-  transform: translateY(-10px);
-  opacity: 0;
-}
-
-/**
- * Narrative Scroll Sections
- */
-
-.narrative-section {
-  padding: var(--space-xl) 0;
-  position: relative;
-}
-
-.narrative-section h2 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 700;
-  margin-bottom: var(--space-lg);
-}
+/* ========================================
+   GENERIC SUPPORT CLASSES
+   ======================================== */
 
 .text-center {
   text-align: center;
 }
 
-.about-intro {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: var(--space-xl);
-  align-items: center;
-}
+/* Keep only animation-related helpers here.
+   Layout rules belong in page/component stylesheets. */
 
-.about-portrait {
-  width: 100%;
-}
-
-.portrait-placeholder {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  background-color: var(--color-medium);
-  border-radius: var(--radius-lg);
-}
-
-.section-title {
-  margin-bottom: var(--space-xl);
-}
-
-/* Page Transition Overlay */
 .page-transition-overlay {
   position: fixed;
   inset: 0;
-  background-color: #0C0C0F;
   z-index: 99998;
+  background-color: #0c0c0f;
   opacity: 0;
   pointer-events: none;
   will-change: opacity;
+  backface-visibility: hidden;
+}
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  #intro-overlay::before,
+  .scroll-dot {
+    animation: none !important;
+  }
+
+  #intro-overlay,
+  .intro-container,
+  .intro-divider,
+  .intro-logo,
+  .intro-tagline,
+  #main-content,
+  .page-transition-overlay {
+    transition: none !important;
+    will-change: auto;
+  }
+}
+
+/* ========================================
+   RESPONSIVE REFINEMENT
+   ======================================== */
+
+@media (max-width: 768px) {
+  .intro-divider {
+    width: min(230px, 48vw);
+    margin-bottom: 2rem;
+  }
+
+  .intro-logo {
+    font-size: clamp(1.85rem, 5vw, 2.3rem);
+    letter-spacing: 0.24em;
+  }
+
+  .intro-tagline {
+    margin-top: 1.25rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-logo {
+    letter-spacing: 0.18em;
+  }
+
+  .intro-tagline {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+  }
 }

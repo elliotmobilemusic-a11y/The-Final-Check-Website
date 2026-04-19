@@ -1,102 +1,176 @@
 /**
  * Services Page Styles
- * Premium Hospitality Consultancy
+ * The Final Check
+ * Refined version
  */
 
-/* Hero Section */
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
 .services-hero {
   position: relative;
-  min-height: 100vh;
+  z-index: 2;
   display: flex;
   align-items: center;
+  min-height: 100svh;
+  padding-top: clamp(7.5rem, 16vh, 10rem);
+  padding-bottom: clamp(5rem, 12vh, 8rem);
   background: transparent;
   overflow: visible;
-  padding-top: 18vh;
-  padding-bottom: 14vh;
+}
+
+.services-hero .container {
+  position: relative;
   z-index: 2;
+}
+
+.services-hero .hero-eyebrow,
+.services-hero .section-eyebrow {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  opacity: 0.82;
+}
+
+.services-hero h1 {
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  line-height: 1.08;
+}
+
+.services-hero .lead {
+  max-width: 40rem;
+  margin-right: auto;
+  margin-bottom: var(--space-lg);
+  margin-left: auto;
+  text-align: center;
+  line-height: 1.72;
+  opacity: 0.86;
+}
+
+.services-hero p:not(.hero-eyebrow):not(.section-eyebrow):not(.lead) {
+  max-width: 44rem;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  line-height: 1.78;
+  opacity: 0.82;
 }
 
 @media (max-width: 768px) {
   .services-hero {
-    padding-top: 28vh;
+    min-height: auto;
+    padding-top: clamp(8rem, 18vh, 10rem);
+    padding-bottom: 7rem;
   }
 }
 
 @media (max-width: 480px) {
   .services-hero {
-    padding-top: 30vh;
+    padding-top: 8.5rem;
+    padding-bottom: 6rem;
   }
 }
 
-.services-hero h1 {
-  text-align: center;
-  margin-bottom: var(--space-lg);
-}
+/* ========================================
+   SERVICES LIST SECTION
+   ======================================== */
 
-.services-hero .lead {
-  text-align: center;
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0.8;
-  line-height: 1.7;
-}
-
-/* Services List Section */
 .services-full-list {
-  padding: var(--space-3xl) 0;
   position: relative;
   z-index: 2;
+  padding: clamp(4rem, 8vh, 6rem) 0;
+}
+
+.services-full-list .container {
+  max-width: 960px;
+}
+
+.services-list-grid {
+  display: grid;
+  gap: var(--space-lg);
 }
 
 .service-detail-card {
+  padding: var(--space-xl);
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-lg);
-  padding: var(--space-xl);
-  margin-bottom: var(--space-lg);
-  transition: all 0.4s var(--ease-out-expo);
+  transition:
+    transform 0.28s var(--ease-out-expo),
+    background-color 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
 }
 
 .service-detail-card:hover {
+  transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.04);
   border-color: rgba(255, 255, 255, 0.12);
-  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
 }
 
 .service-detail-card h2 {
-  text-align: center;
   margin-bottom: var(--space-md);
+  text-align: center;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 .service-detail-card p {
-  text-align: center;
-  max-width: 720px;
-  margin-left: auto;
+  max-width: 44rem;
   margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  text-align: center;
   line-height: 1.8;
   opacity: 0.85;
 }
 
-/* CTA Section */
+/* ========================================
+   CTA SECTION
+   ======================================== */
+
 .services-cta {
-  padding: var(--space-3xl) 0;
-  text-align: center;
   position: relative;
   z-index: 2;
+  padding: clamp(4rem, 8vh, 6rem) 0 clamp(5rem, 10vh, 7rem);
+  text-align: center;
+}
+
+.services-cta .container {
+  max-width: 760px;
 }
 
 .services-cta h2 {
-  text-align: center;
   margin-bottom: var(--space-md);
+  text-align: center;
 }
 
 .services-cta p {
-  text-align: center;
-  max-width: 600px;
-  margin-left: auto;
+  max-width: 38rem;
   margin-right: auto;
   margin-bottom: var(--space-xl);
-  opacity: 0.8;
+  margin-left: auto;
+  text-align: center;
+  line-height: 1.75;
+  opacity: 0.82;
+}
+
+/* ========================================
+   OPTIONAL BUTTON SPACING
+   ======================================== */
+
+.services-cta .btn,
+.services-cta .button,
+.services-cta a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
