@@ -352,45 +352,15 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.85) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    transparent 100%
+    rgba(0, 0, 0, 0.4) 0%,
+    transparent 60%
   );
   opacity: 0;
   transition: opacity 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: var(--space-lg);
 }
 
 .gallery-card:hover .gallery-overlay {
   opacity: 1;
-}
-
-.gallery-category {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  margin-bottom: var(--space-xs);
-  display: block;
-}
-
-.gallery-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0 0 var(--space-xs) 0;
-  color: var(--color-white);
-}
-
-.gallery-description {
-  font-size: 0.875rem;
-  line-height: 1.5;
-  opacity: 0.8;
-  margin: 0;
-  color: var(--color-light);
 }
 
 /* Lightbox */

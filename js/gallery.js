@@ -7,66 +7,66 @@
 const galleryItems = [
   {
     src: "assets/images/portfolio/1F16E228-7923-4131-A5D2-CA2AD1C9B6FD.JPG",
-    title: "Fine dining dish presentation",
+    title: "Fine dining dish",
     category: "Dishes",
-    description: "Precision plated seasonal dishes with focus on quality and consistency",
+    description: "",
     alt: "Gourmet plated restaurant dish"
   },
   {
     src: "assets/images/portfolio/206E0BCD-91B3-449F-8346-17B04327F370.JPG",
-    title: "Pub food excellence",
+    title: "Award winning food",
     category: "Menu Development",
-    description: "Provenance Inns award winning food offer at The Publican Awards 2022",
-    alt: "Award winning pub food presentation"
+    description: "",
+    alt: "Pub food presentation"
+  },
+  {
+    src: "assets/images/portfolio/325d096b-e2b4-4d47-b63c-0299443bee0b.jpg",
+    title: "Kitchen work",
+    category: "Kitchens",
+    description: "",
+    alt: "Commercial kitchen"
   },
   {
     src: "assets/images/portfolio/6157DB36-EF5B-4086-AB87-E65B01E818B5.JPG",
-    title: "Premium ingredient led menu",
+    title: "Seasonal dish",
     category: "Dishes",
-    description: "Seasonal menu development built around quality local produce",
-    alt: "High quality seasonal restaurant dish"
+    description: "",
+    alt: "Restaurant dish"
   },
   {
     src: "assets/images/portfolio/DF01AD4F-FCBB-4488-A7FD-859BFC7BE411.JPG",
     title: "Kitchen operations",
     category: "Kitchens",
-    description: "Practical operational systems and standards implementation",
-    alt: "Professional commercial kitchen"
+    description: "",
+    alt: "Professional kitchen"
   },
   {
     src: "assets/images/portfolio/IMG_0302.JPG",
-    title: "New opening kitchen setup",
+    title: "New opening",
     category: "New Openings",
-    description: "Complete kitchen design, layout and operational setup for new venues",
-    alt: "Commercial kitchen during venue opening"
-  },
-  {
-    src: "assets/images/portfolio/IMG_4308.JPG",
-    title: "Gastro pub dining",
-    category: "Consultancy Work",
-    description: "Food led hospitality operations and performance improvement",
-    alt: "Gastro pub interior and dining area"
+    description: "",
+    alt: "New venue opening"
   },
   {
     src: "assets/images/portfolio/IMG_4774.JPG",
-    title: "Modern fine dining",
+    title: "Fine dining",
     category: "Menu Development",
-    description: "Refined contemporary dish development and menu engineering",
-    alt: "Contemporary fine dining presentation"
-  },
-  {
-    src: "assets/images/portfolio/IMG_5192.jpg",
-    title: "Kitchen leadership",
-    category: "Kitchens",
-    description: "Executive Chef leadership across multiple award winning sites",
-    alt: "Professional chef in commercial kitchen"
+    description: "",
+    alt: "Fine dining presentation"
   },
   {
     src: "assets/images/portfolio/IMG_8464.JPG",
-    title: "Premium seasonal dining",
+    title: "Seasonal dining",
     category: "Dishes",
-    description: "High quality ingredient focused menu development and presentation",
-    alt: "Premium seasonal restaurant dish"
+    description: "",
+    alt: "Seasonal restaurant dish"
+  },
+  {
+    src: "assets/images/portfolio/IMG_8843.HEIC",
+    title: "Hospitality work",
+    category: "Consultancy Work",
+    description: "",
+    alt: "Hospitality venue"
   }
 ];
 
