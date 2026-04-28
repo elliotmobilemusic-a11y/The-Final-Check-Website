@@ -6,46 +6,60 @@
 
 const galleryItems = [
   {
-    src: "assets/images/hero-right.png",
-    title: "Restaurant operational standards",
-    category: "Consultancy Work",
-    description: "Practical operational support delivered at senior level",
-    alt: "Restaurant interior"
+    src: "assets/images/portfolio/1F16E228-7923-4131-A5D2-CA2AD1C9B6FD.JPG",
+    title: "Fine dining dish presentation",
+    category: "Dishes",
+    description: "Precision plated seasonal dishes with focus on quality and consistency",
+    alt: "Gourmet plated restaurant dish"
   },
   {
-    src: "assets/images/hero-left.png",
-    title: "Premium food presentation",
+    src: "assets/images/portfolio/206E0BCD-91B3-449F-8346-17B04327F370.JPG",
+    title: "Pub food excellence",
     category: "Menu Development",
-    description: "Refined dishes built around quality ingredients",
-    alt: "Plated fine dining dish"
+    description: "Provenance Inns award winning food offer at The Publican Awards 2022",
+    alt: "Award winning pub food presentation"
   },
   {
-    src: "assets/images/Jason-Wardill.jpg",
+    src: "assets/images/portfolio/6157DB36-EF5B-4086-AB87-E65B01E818B5.JPG",
+    title: "Premium ingredient led menu",
+    category: "Dishes",
+    description: "Seasonal menu development built around quality local produce",
+    alt: "High quality seasonal restaurant dish"
+  },
+  {
+    src: "assets/images/portfolio/DF01AD4F-FCBB-4488-A7FD-859BFC7BE411.JPG",
+    title: "Kitchen operations",
+    category: "Kitchens",
+    description: "Practical operational systems and standards implementation",
+    alt: "Professional commercial kitchen"
+  },
+  {
+    src: "assets/images/portfolio/IMG_0302.JPG",
+    title: "New opening kitchen setup",
+    category: "New Openings",
+    description: "Complete kitchen design, layout and operational setup for new venues",
+    alt: "Commercial kitchen during venue opening"
+  },
+  {
+    src: "assets/images/portfolio/IMG_4308.JPG",
+    title: "Gastro pub dining",
+    category: "Consultancy Work",
+    description: "Food led hospitality operations and performance improvement",
+    alt: "Gastro pub interior and dining area"
+  },
+  {
+    src: "assets/images/portfolio/IMG_4774.JPG",
+    title: "Modern fine dining",
+    category: "Menu Development",
+    description: "Refined contemporary dish development and menu engineering",
+    alt: "Contemporary fine dining presentation"
+  },
+  {
+    src: "assets/images/portfolio/IMG_5192.jpg",
     title: "Kitchen leadership",
     category: "Kitchens",
-    description: "Executive Chef experience across multiple award winning sites",
-    alt: "Jason Wardill in professional kitchen"
-  },
-  {
-    src: "assets/images/hero-right-2.png",
-    title: "New venue opening",
-    category: "New Openings",
-    description: "Complete support from concept through to successful launch",
-    alt: "New restaurant opening"
-  },
-  {
-    src: "assets/images/hero-left-2.png",
-    title: "Seasonal menu engineering",
-    category: "Dishes",
-    description: "Menu development focused on margin, quality and consistency",
-    alt: "Seasonal restaurant dish presentation"
-  },
-  {
-    src: "assets/images/hero-right-3.png",
-    title: "Hospitality operations",
-    category: "Consultancy Work",
-    description: "Operational audits and performance improvement",
-    alt: "Hospitality venue interior"
+    description: "Executive Chef leadership across multiple award winning sites",
+    alt: "Professional chef in commercial kitchen"
   }
 ];
 
