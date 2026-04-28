@@ -60,6 +60,13 @@ const galleryItems = [
     category: "Kitchens",
     description: "Executive Chef leadership across multiple award winning sites",
     alt: "Professional chef in commercial kitchen"
+  },
+  {
+    src: "assets/images/portfolio/IMG_8464.JPG",
+    title: "Premium seasonal dining",
+    category: "Dishes",
+    description: "High quality ingredient focused menu development and presentation",
+    alt: "Premium seasonal restaurant dish"
   }
 ];
 
