@@ -76,7 +76,6 @@ const galleryItems = [
 
 document.addEventListener('DOMContentLoaded', () => {
   renderGallery();
-  initLightbox();
 });
 
 function renderGallery() {
@@ -103,11 +102,9 @@ function renderGallery() {
           width="600"
           height="400"
         >
-        <div class="gallery-overlay"></div>
       </div>
     `;
 
-    galleryCard.addEventListener('click', () => openLightbox(index));
     galleryGrid.appendChild(galleryCard);
   });
 
@@ -141,53 +138,4 @@ function initGalleryFilters() {
 
     filterContainer.appendChild(filterButton);
   });
-}
-
-function initLightbox() {
-  // Create lightbox container
-  const lightbox = document.createElement('div');
-  lightbox.id = 'gallery-lightbox';
-  lightbox.innerHTML = `
-    <div class="lightbox-content">
-      <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
-      <img src="" alt="" class="lightbox-image">
-      <div class="lightbox-caption">
-        <span class="lightbox-category"></span>
-        <h3 class="lightbox-title"></h3>
-        <p class="lightbox-description"></p>
-      </div>
-    </div>
-  `;
-  document.body.appendChild(lightbox);
-
-  // Close events
-  lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  // Keyboard close
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
-  });
-}
-
-function openLightbox(index) {
-  const item = galleryItems[index];
-  const lightbox = document.getElementById('gallery-lightbox');
-  
-  lightbox.querySelector('.lightbox-image').src = item.src;
-  lightbox.querySelector('.lightbox-image').alt = item.alt;
-  lightbox.querySelector('.lightbox-category').textContent = item.category;
-  lightbox.querySelector('.lightbox-title').textContent = item.title;
-  lightbox.querySelector('.lightbox-description').textContent = item.description;
-
-  lightbox.classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox() {
-  const lightbox = document.getElementById('gallery-lightbox');
-  lightbox.classList.remove('active');
-  document.body.style.overflow = '';
 }

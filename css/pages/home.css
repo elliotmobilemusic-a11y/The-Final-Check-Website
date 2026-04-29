@@ -205,6 +205,10 @@ body::before {
   line-height: 1.08;
 }
 
+.hero-subtitle {
+  color: var(--color-primary);
+}
+
 .hero-section .lead {
   max-width: 40rem;
   margin-right: auto;
