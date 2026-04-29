@@ -89,6 +89,14 @@
       path = path.slice(0, -1);
     }
 
+    if (path === "/index.html") {
+      return "/";
+    }
+
+    if (path.length > 5 && path.endsWith(".html")) {
+      path = path.slice(0, -5);
+    }
+
     return path || "/";
   }
 })();
