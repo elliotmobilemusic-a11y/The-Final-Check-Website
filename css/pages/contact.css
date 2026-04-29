@@ -4,6 +4,60 @@
  * Refined version
  */
 
+.direct-contact-section {
+  padding-top: var(--space-2xl);
+}
+
+.direct-contact-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-lg);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.direct-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-xl);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  background: rgba(22, 22, 27, 0.42);
+  backdrop-filter: blur(12px);
+  transition:
+    border-color 0.22s var(--ease-out-expo),
+    transform 0.22s var(--ease-out-expo),
+    box-shadow 0.22s var(--ease-out-expo);
+}
+
+.direct-contact-item:hover,
+.direct-contact-item:focus-visible {
+  border-color: rgba(168, 143, 94, 0.42);
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(36, 31, 38, 0.18);
+}
+
+.direct-contact-item:focus-visible {
+  outline: none;
+}
+
+.direct-contact-label {
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.direct-contact-value {
+  color: var(--color-white);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
 .client-intake-form {
   --form-bg: rgba(22, 22, 27, 0.42);
   --form-border: rgba(120, 125, 140, 0.1);
@@ -225,6 +279,14 @@
 }
 
 @media (max-width: 768px) {
+  .direct-contact-list {
+    grid-template-columns: 1fr;
+  }
+
+  .direct-contact-item {
+    padding: var(--space-lg);
+  }
+
   .client-intake-form {
     padding: var(--space-xl) var(--space-lg);
   }
