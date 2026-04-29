@@ -226,6 +226,37 @@
   text-transform: uppercase;
 }
 
+.footer-social-links {
+  margin: var(--space-md) 0;
+}
+
+.footer-social-links a {
+  color: var(--color-light);
+  font-size: 0.875rem;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.footer-social-links a:hover {
+  opacity: 1;
+  color: var(--color-white);
+}
+
+.footer-social-links span {
+  margin: 0 var(--space-sm);
+  opacity: 0.3;
+}
+
+@media (max-width: 480px) {
+  .footer-social-links a {
+    font-size: 0.8rem;
+  }
+  
+  .footer-social-links span {
+    margin: 0 var(--space-xs);
+  }
+}
+
 #site-footer p {
   margin-bottom: var(--space-xs);
   font-size: 0.875rem;

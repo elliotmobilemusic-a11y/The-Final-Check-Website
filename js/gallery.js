@@ -76,7 +76,6 @@ const galleryItems = [
 
 document.addEventListener('DOMContentLoaded', () => {
   renderGallery();
-  initGalleryFilters();
   initLightbox();
 });
 
@@ -104,13 +103,7 @@ function renderGallery() {
           width="600"
           height="400"
         >
-        <div class="gallery-overlay">
-          <div class="gallery-caption">
-            <span class="gallery-category">${item.category}</span>
-            <h3 class="gallery-title">${item.title}</h3>
-            <p class="gallery-description">${item.description}</p>
-          </div>
-        </div>
+        <div class="gallery-overlay"></div>
       </div>
     `;
 
