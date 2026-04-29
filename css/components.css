@@ -41,13 +41,24 @@
 
 .nav-brand {
   display: inline-flex;
-  align-items: center;
+  flex-direction: column;
   color: var(--color-white);
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.nav-brand-main {
   font-size: 0.9375rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  line-height: 1;
-  white-space: nowrap;
+}
+
+.nav-brand-subtitle {
+  font-size: 0.7rem;
+  font-weight: 400;
+  opacity: 0.75;
+  letter-spacing: 0.02em;
+  margin-top: 2px;
 }
 
 .nav-links {
