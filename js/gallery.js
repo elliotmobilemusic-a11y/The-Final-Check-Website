@@ -62,7 +62,7 @@ const galleryItems = [
     alt: "Seasonal restaurant dish"
   },
   {
-    src: "assets/images/portfolio/IMG_8843.HEIC",
+    src: "assets/images/portfolio/IMG_8843.jpg",
     title: "Hospitality work",
     category: "Consultancy Work",
     description: "",
