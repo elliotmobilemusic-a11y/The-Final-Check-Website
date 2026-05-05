@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = collectFormData();
             const result = await submitForm(formData);
             
-            if (result && result.success === 'true') {
+            if (result && (result.success === 'true' || result.success === true)) {
                 showSuccess();
             } else {
                 showError();
