@@ -114,7 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         return {
-            token: window.CLIENT_INTAKE_CONFIG.TOKEN,
             form: {
                 businessName: document.getElementById('businessName').value.trim(),
                 contactName: document.getElementById('contactName').value.trim(),
